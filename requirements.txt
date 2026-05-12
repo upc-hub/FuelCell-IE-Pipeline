@@ -1,0 +1,86 @@
+# FuelCell-IE-Pipeline — pip requirements
+# Python 3.7 required
+#
+# If you use conda (recommended), use environment.yml instead — ignore this file.
+#
+# pip install order:
+# Step 1: PyTorch first
+#   CPU (mercury): pip install torch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1
+#   GPU (htcatg02): pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1+cu117
+#                      -f https://download.pytorch.org/whl/torch_stable.html
+# Step 2: pip install -r requirements.txt
+# Step 3: Install spaCy models (see README Step 5)
+
+# Core NLP framework
+allennlp==1.1.0
+allennlp-models==1.1.0
+jsonnet==0.20.0
+overrides==3.1.0
+conllu==4.1
+word2number==1.1
+py-rouge==1.1
+plac==1.1.3
+pysbd==0.3.4
+
+# Transformers
+transformers==3.0.2
+tokenizers==0.8.1rc1
+sentencepiece==0.2.0
+sacremoses==0.0.53
+regex==2024.4.16
+
+# spaCy stack (pinned to htcat dygiepp versions — Python 3.7 compatible)
+murmurhash==1.0.10
+cymem==2.0.8
+preshed==3.0.9
+blis==0.4.1
+thinc==7.4.1
+catalogue==1.0.2
+srsly==1.0.7
+wasabi==0.10.1
+spacy-legacy==3.0.12
+langcodes==3.3.0
+pydantic==1.10.2
+smart-open==6.4.0
+typer==0.7.0
+confection==0.1.5
+pathy==0.10.3
+weasel==0.4.1
+spacy==2.3.1
+nmslib==2.1.1
+scispacy==0.2.5
+
+# RSC scraping
+selenium==3.141.0
+requests==2.31.0
+beautifulsoup4==4.11.1
+lxml==5.3.0
+
+# Hugging Face
+huggingface-hub==0.16.4
+
+# Data processing
+numpy==1.21.6
+pandas==0.25.2
+scikit-learn==1.0.2
+scipy==1.7.3
+
+# Utilities
+nltk==3.8.1
+ftfy==6.1.1
+tqdm==4.67.0
+pyyaml==6.0.1
+tensorboardX==2.6.2.2
+optuna==4.0.0
+filelock==3.0.12
+boto3==1.33.13
+h5py==3.8.0
+jsonpickle==3.4.2
+packaging==24.0
+click==8.1.7
+six==1.16.0
+joblib==1.3.2
+importlib-metadata==6.7.0
+importlib-resources==5.12.0
+protobuf==4.24.4
+SQLAlchemy==2.0.36
