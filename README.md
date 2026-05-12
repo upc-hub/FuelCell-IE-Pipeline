@@ -238,11 +238,96 @@ This `.txt` file is the input to **Part 2** (DyGIE++ NER/RE prediction).
 
 ## Part 2: NER/RE Prediction with DyGIE++
 
-> **Coming soon.** See `predict.py`.
-> The trained model will be available for download on Hugging Face.
+`predict.py` runs the trained DyGIE++ model on a structured article `.txt` file
+(produced by Part 1) and outputs entities and relations as JSON.
+
+The model is hosted on Hugging Face at
+[UPC-HUB/fuelcell-ner-re](https://huggingface.co/UPC-HUB/fuelcell-ner-re)
+and uses [MatSci-BERT](https://huggingface.co/UPC-HUB/matscibert-finetuned-squad)
+as the underlying language model.
+
+DyGIE++ does **not** need to be installed — only AllenNLP (already in the
+`dygiepp` conda environment) is required.
 
 The pipeline uses [DyGIE++](https://github.com/dwadden/dygiepp) for joint
 named entity recognition (NER) and relation extraction (RE).
+
+### Setup
+
+The `dygiepp` conda environment (set up in Part 1) already contains everything needed.
+No additional installation is required.
+
+### Usage
+
+#### Machines with internet access
+
+```bash
+# Model downloads automatically from Hugging Face on first run (~840MB)
+python predict.py --input articles/d3im00081h.txt --output results/
+
+# With GPU (recommended — much faster):
+python predict.py --input articles/d3im00081h.txt --output results/ --cuda 0
+```
+
+#### Machines without internet access (HPC, closed networks)
+
+Copy the model from a machine that has internet access:
+
+```bash
+# Step 1: On the internet-connected machine, download the model
+python -c "
+from huggingface_hub import hf_hub_download
+hf_hub_download(repo_id='UPC-HUB/fuelcell-ner-re', filename='model.tar.gz')
+"
+
+# Step 2: Copy to the HPC machine
+scp ~/.cache/huggingface/hub/models--UPC-HUB--fuelcell-ner-re/snapshots/*/model.tar.gz     hpc_machine:~/model.tar.gz
+
+# Step 3: Extract MatSci-BERT and create a local model config
+mkdir -p /tmp/model_local && cd /tmp/model_local
+tar -xzf ~/model.tar.gz
+cp -r matscibert_weights ~/matscibert_weights
+
+# Fix config to use absolute path
+sed -i "s|matscibert_weights|/home/YOUR_USERNAME/matscibert_weights|g" config.json
+tar -czf ~/model_local.tar.gz config.json weights.th vocabulary/
+
+# Step 4: Run prediction
+python predict.py     --input article.txt     --output results/     --model-path ~/model_local.tar.gz     --cuda 0
+```
+
+#### Full pipeline example (Part 1 → Part 2)
+
+```bash
+# Part 1: Scrape and extract article text
+python scrape_rsc.py full     --query "ORR catalyst fuel cell"     --page 1 --article 2     --output ./articles/
+
+# Part 2: Run NER/RE prediction
+python predict.py     --input ./articles/d3im00081h.txt     --output ./results/     --cuda 0
+```
+
+#### Output format
+
+The output JSON file contains extracted entities and relations:
+
+```json
+[
+  {
+    "doc_key": "d3im00081h",
+    "entities": [
+      {"text": "ZIF-8@CNT",           "label": "catalyst",  "sentence_idx": 2},
+      {"text": "carbon nanotube (CNT)","label": "support",   "sentence_idx": 2},
+      {"text": "pyrolysis",            "label": "process",   "sentence_idx": 2},
+      {"text": "900 °C",              "label": "condition", "sentence_idx": 2},
+      {"text": "0.847 V",             "label": "value",     "sentence_idx": 8}
+    ],
+    "relations": [
+      {"subject": "ZIF-8@CNT", "relation": "related_to", "object": "carbon nanotube (CNT)"},
+      {"subject": "ZIF-8@CNT", "relation": "related_to", "object": "pyrolysis"}
+    ]
+  }
+]
+```
 
 ### Entity Types
 
@@ -250,7 +335,7 @@ named entity recognition (NER) and relation extraction (RE).
 |------|-------------|---------|
 | `catalyst` | ORR catalyst material | Fe1Co2-ZNT-900 |
 | `support` | Catalyst support | carbon nanotube (CNT) |
-| `additive` | Additive material | KOH |
+| `additive` | Additive | KOH |
 | `electrolyte` | Electrolyte | Nafion |
 | `precursors` | Precursor material | ZIF-8 |
 | `other_material` | Other materials | Pt/C |
@@ -265,8 +350,15 @@ named entity recognition (NER) and relation extraction (RE).
 
 | Type | Description |
 |------|-------------|
-| `related_to` | General relationship between two entities |
+| `related_to` | General relationship between entities |
 | `equivalent` | Material equivalence (e.g. abbreviation ↔ full name) |
+
+### Hugging Face Model Repositories
+
+| Repository | Contents | Size |
+|------------|----------|------|
+| [UPC-HUB/fuelcell-ner-re](https://huggingface.co/UPC-HUB/fuelcell-ner-re) | DyGIE++ model weights + MatSci-BERT embedded | 840MB |
+| [UPC-HUB/matscibert-finetuned-squad](https://huggingface.co/UPC-HUB/matscibert-finetuned-squad) | MatSci-BERT fine-tuned on SQuAD (standalone) | 418MB |
 
 ---
 
