@@ -1,4 +1,3 @@
-# FuelCell-IE-Pipeline
 # Information Extraction from Literature for ORR Catalyst in Fuel Cell
 
 This repository contains scripts, configurations, and sample data accompanying the paper:
