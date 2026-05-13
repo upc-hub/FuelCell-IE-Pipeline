@@ -103,19 +103,24 @@ conda activate fuelcell-ie
 
 ### Step 4: Install PyTorch
 
-Install **after** activating the environment:
+Install **after** activating the environment.
 
 ```bash
-# GPU (CUDA 11.7) — recommended for Part 2:
-pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1+cu117 \
+# CPU only — works on any machine, no CUDA conflicts (recommended for testing):
+pip install torch==1.13.1+cpu torchvision==0.14.1+cpu torchaudio==0.13.1+cpu \
     -f https://download.pytorch.org/whl/torch_stable.html
 
-# CPU only (works but Part 2 will be slow):
-pip install torch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1
+# GPU (CUDA 11.7 only) — for faster Part 2 inference:
+pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1+cu117 \
+    -f https://download.pytorch.org/whl/torch_stable.html
 ```
 
-> The warning `allennlp 1.1.0 requires torch<1.7.0` can be safely ignored —
-> torch 1.13.1 works correctly with this model.
+> **Note:** The warning `allennlp 1.1.0 requires torch<1.7.0` can be safely
+> ignored — torch 1.13.1 works correctly with this model.
+>
+> **Note:** Do NOT use `pip install torch==1.13.1` (without `+cpu`) on machines
+> with CUDA older than 11.7 — it installs CUDA 11.7 libraries that may conflict
+> with the system CUDA. Always use `+cpu` or `+cu117` explicitly.
 
 ### Step 5: Install spaCy language models
 
@@ -153,9 +158,12 @@ If conda is not available (use `requirements.txt` instead of `environment.yml`):
 
 ```bash
 # Python 3.7 required
-pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1+cu117 \
-    -f https://download.pytorch.org/whl/torch_stable.html   # GPU
-# or: pip install torch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1  # CPU
+# CPU (recommended for testing):
+pip install torch==1.13.1+cpu torchvision==0.14.1+cpu torchaudio==0.13.1+cpu \
+    -f https://download.pytorch.org/whl/torch_stable.html
+# GPU (CUDA 11.7 only):
+# pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1+cu117 \
+#     -f https://download.pytorch.org/whl/torch_stable.html
 
 pip install -r requirements.txt
 

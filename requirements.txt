@@ -42,6 +42,19 @@ spacy==2.3.1
 nmslib==2.1.1
 scispacy==0.2.5
 
+# cde_n (ChemdataExtractor v2.3.2 fork) dependencies
+deprecation==2.1.0
+yaspin==2.4.0
+dawg-patched==0.9.1
+tabledataextractor==1.5.11
+pdfminer.six==20220524
+python-crfsuite==0.9.10
+appdirs==1.4.4
+cssselect==1.2.0
+stanza==1.6.1
+emoji==2.14.1
+six==1.16.0
+
 # RSC scraping
 chromedriver-autoinstaller==0.6.4
 selenium==3.141.0

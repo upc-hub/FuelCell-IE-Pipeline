@@ -24,9 +24,10 @@ dependencies:
       - pysbd==0.3.4
 
       # ── PyTorch — install AFTER conda env create (see README Step 4) ──────
-      # On mercury (CUDA 11.6, incompatible with model — use CPU):
-      #   pip install torch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1
-      # On htcatg02 (CUDA 11.7 — GPU inference):
+      # CPU only (no CUDA conflicts, works on any machine):
+      #   pip install torch==1.13.1+cpu torchvision==0.14.1+cpu torchaudio==0.13.1+cpu
+      #       -f https://download.pytorch.org/whl/torch_stable.html
+      # GPU (CUDA 11.7 only — for faster Part 2 inference):
       #   pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1+cu117
       #       -f https://download.pytorch.org/whl/torch_stable.html
 
@@ -53,6 +54,19 @@ dependencies:
       # Language models installed separately (see README Step 5):
       #   en_core_web_sm-2.3.1  — used by cde_n (RSC scraper)
       #   en_core_sci_lg-0.3.0  — used by predict.py (scientific tokenisation)
+
+      # ── cde_n (ChemdataExtractor v2.3.2 fork) dependencies ──────────────────
+      - deprecation==2.1.0
+      - yaspin==2.4.0
+      - dawg-patched==0.9.1
+      - tabledataextractor==1.5.11
+      - pdfminer.six==20220524
+      - python-crfsuite==0.9.10
+      - appdirs==1.4.4
+      - cssselect==1.2.0
+      - stanza==1.6.1
+      - emoji==2.14.1
+      - six==1.16.0
 
       # ── RSC scraping (scrape_rsc.py) ──────────────────────────────────────
       - chromedriver-autoinstaller==0.6.4
