@@ -26,23 +26,15 @@ FuelCell-IE-Pipeline/
 ├── requirements.txt       # pip alternative
 ├── scrape_rsc.py          # Part 1: RSC scraper + CDE text extraction
 ├── predict.py             # Part 2: DyGIE++ NER/RE prediction
-├── cde_n/                 # Custom ChemdataExtractor fork (cloned separately)
+├── cde_n/                 # Custom ChemdataExtractor fork (cloned in Step 2)
 │   └── chemdataextractor/
 │       ├── scrape/pub/rsc.py   ← modified: headless Chrome + date filter
 │       └── ...
-├── configs/
-│   └── fuelcell.jsonnet   # AllenNLP training configuration (reference only)
-└── sample_data/
-    ├── README.md
-    ├── brat_sample/        # 8 sample brat annotations (.ann + .txt)
-    └── dygiepp_format/     # Pre-converted DyGIE++ JSON
-        ├── train.json
-        ├── dev.json
-        └── test.json
+└── dygiepp/               # DyGIE++ repository (cloned in Step 3)
 ```
 
-> The full annotated corpus cannot be released due to RSC copyright constraints.
-> The 8 sample documents are sufficient to demonstrate the pipeline end-to-end.
+> The annotated corpus used for training cannot be released due to RSC copyright
+> constraints. The trained model is available on Hugging Face for direct use.
 
 ---
 
@@ -461,7 +453,3 @@ And ChemDataExtractor:
 ## License
 
 Code in this repository is released under the **MIT License**.
-Sample data annotations are released under **CC BY 4.0**.
-
-> The full annotated corpus is not released due to RSC copyright restrictions.
-> The sample data provided is sufficient to reproduce the pipeline end-to-end.
