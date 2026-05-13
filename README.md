@@ -1,156 +1,180 @@
-# Information Extraction from Literature for ORR Catalyst in Fuel Cell
+# FuelCell-IE-Pipeline
 
-This repository contains scripts, configurations, and sample data accompanying the paper:
+Information extraction pipeline for ORR catalyst literature in fuel cells.
 
-> **"Information Extraction from Literature for ORR Catalyst in Fuel Cell"**
+This repository accompanies the paper:
+
+> **Information Extraction from Literature for ORR Catalyst in Fuel Cell**
 > Hein Htet, Manae Hirano, Amgad Ahmed Ali Ibrahim, Yutaka Sasaki, Ryoji Asahi
 > *Computational Materials Science*, 2026
 
 The pipeline has two parts:
 
-| Part | Input | Script | Output |
-|------|-------|--------|--------|
-| 1 | RSC search query | `scrape_rsc.py` | Structured article text (`.txt`) |
-| 2 | Article text (`.txt`) | `predict.py` | Entities & relations (`.json`) |
+| Part | Script | Input | Output |
+|------|--------|-------|--------|
+| 1 | `scrape_rsc.py` | RSC search query | Structured article text (`.txt`) |
+| 2 | `predict.py` | Article text (`.txt`) | Entities & relations (`.json`) |
 
 ---
 
 ## Repository Structure
 
 ```
-.
+FuelCell-IE-Pipeline/
 ├── README.md
-├── environment.yml          # Conda environment (minimal)
-├── requirements.txt         # pip alternative
-├── scrape_rsc.py            # Part 1: RSC scraper + article text extraction
-├── predict.py               # Part 2: DyGIE++ NER/RE prediction (coming soon)
+├── environment.yml        # Conda environment for both scripts
+├── requirements.txt       # pip alternative
+├── scrape_rsc.py          # Part 1: RSC scraper + CDE text extraction
+├── predict.py             # Part 2: DyGIE++ NER/RE prediction
+├── cde_n/                 # Custom ChemdataExtractor fork (cloned separately)
+│   └── chemdataextractor/
+│       ├── scrape/pub/rsc.py   ← modified for headless Chrome + date filter
+│       └── ...
 ├── configs/
-│   └── fuelcell.jsonnet     # AllenNLP training configuration
+│   └── fuelcell.jsonnet   # AllenNLP training configuration (reference only)
 └── sample_data/
-    ├── README.md            # Description of entity/relation types
-    ├── brat_sample/         # Sample raw brat annotations (.ann + .txt)
-    └── dygiepp_format/      # Pre-converted DyGIE++ JSON format
+    ├── README.md
+    ├── brat_sample/        # 8 sample brat annotations (.ann + .txt)
+    └── dygiepp_format/     # Pre-converted DyGIE++ JSON
         ├── train.json
         ├── dev.json
         └── test.json
 ```
 
-> **Note:** The full annotated corpus cannot be released due to copyright constraints.
-> The sample data (8 documents) is sufficient to demonstrate the full pipeline end-to-end.
+> The full annotated corpus cannot be released due to RSC copyright constraints.
+> The 8 sample documents are sufficient to demonstrate the pipeline end-to-end.
+
+---
+
+## Environment Setup
+
+Both `scrape_rsc.py` and `predict.py` run in a **single conda environment**
+named `fuelcell-ie`. All setup steps are run on **mercury** unless noted.
+
+> **Machine setup used in this work:**
+> - `mercury` — internet access, Chrome installed, NVIDIA T400 (CUDA 11.6, 2GB)
+>   → runs Part 1 and Part 2 CPU (testing)
+> - `htcatg02` — NVIDIA GPU with CUDA 11.7, shares filesystem with mercury
+>   → runs Part 2 GPU (production)
+>
+> If your setup differs, adjust machine names accordingly.
+
+### Step 1: Clone this repository
+
+```bash
+git clone https://github.com/upc-hub/FuelCell-IE-Pipeline.git
+cd FuelCell-IE-Pipeline
+```
+
+### Step 2: Clone the custom ChemdataExtractor fork
+
+The RSC scraper requires a modified version of ChemdataExtractor.
+Clone it **inside the project directory** as `cde_n`:
+
+```bash
+git clone https://github.com/upc-hub/chemdataextractor-fork.git cde_n
+```
+
+Your directory should now look like:
+```
+FuelCell-IE-Pipeline/
+├── scrape_rsc.py
+├── cde_n/
+│   └── chemdataextractor/
+│       └── scrape/pub/rsc.py
+└── ...
+```
+
+> **What was modified in cde_n?**
+> Only `cde_n/chemdataextractor/scrape/pub/rsc.py` was changed — three modifications
+> to `perform_search()`: switched from Firefox to headless Chrome, added ChromeDriver
+> path, and added date range + Open Access filters (2010–2024) to the RSC search URL.
+> All other CDE code is unchanged from the original.
+
+### Step 3: Create conda environment
+
+```bash
+conda env create -f environment.yml
+conda activate fuelcell-ie
+```
+
+> If you prefer pip over conda, see [pip installation](#pip-installation-alternative) below.
+
+### Step 4: Install PyTorch
+
+Install **after** activating the environment.
+
+```bash
+# On mercury (CUDA 11.6 — model requires 11.7, so use CPU version):
+pip install torch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1
+
+# On htcatg02 (CUDA 11.7 — GPU inference for Part 2):
+pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1+cu117 \
+    -f https://download.pytorch.org/whl/torch_stable.html
+```
+
+> Mercury has an NVIDIA T400 (CUDA 11.6, 2GB VRAM). Since the model requires
+> CUDA 11.7 and needs more than 2GB VRAM, use CPU on mercury and GPU on htcatg02.
+
+### Step 5: Install spaCy language models
+
+```bash
+# English model — required by cde_n for RSC scraping (Part 1)
+pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz
+
+# Scientific English model — required by predict.py for tokenisation (Part 2)
+pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.3.0/en_core_sci_lg-0.3.0.tar.gz
+```
+
+### Step 6: Chrome browser
+
+`scrape_rsc.py` uses Selenium to query the RSC website. ChromeDriver is
+**installed automatically** via `chromedriver-autoinstaller` (included in
+the conda environment) — no manual driver download needed.
+
+You only need Google Chrome installed on the machine:
+
+```bash
+# Verify Chrome is available
+google-chrome --version
+```
+
+> If you need to use a specific ChromeDriver path, pass it with `--chromedriver`:
+> ```bash
+> python scrape_rsc.py --chromedriver /path/to/chromedriver pages --query "..."
+> ```
+
+---
+
+## pip Installation Alternative
+
+If conda is not available, use `requirements.txt` instead:
+
+```bash
+# Python 3.7 required
+pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1+cu117 \
+    -f https://download.pytorch.org/whl/torch_stable.html
+
+pip install -r requirements.txt
+
+pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz
+pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.3.0/en_core_sci_lg-0.3.0.tar.gz
+```
+
+> **Note:** If you are using conda (recommended), ignore `requirements.txt` —
+> `environment.yml` already covers everything.
 
 ---
 
 ## Part 1: RSC Article Scraper
 
-`scrape_rsc.py` searches the Royal Society of Chemistry (RSC) publication database,
-downloads articles, and extracts structured text sections (abstract, results &
-discussion, conclusion) using a custom fork of
-[ChemDataExtractor](https://github.com/mcs07/ChemDataExtractor).
+`scrape_rsc.py` searches RSC, downloads article HTML, and extracts structured
+text sections (abstract, results & discussion, conclusion) using the `cde_n`
+ChemdataExtractor fork.
 
-### Setup
+Run all commands from the project root directory where `cde_n/` is located.
 
-#### Step 1: Clone this repository
-
-```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-cd YOUR_REPO_NAME
-```
-
-#### Step 2: Clone the custom ChemDataExtractor fork
-
-This pipeline uses a modified version of ChemDataExtractor. It must be cloned
-**inside the project directory** as `cde_n`:
-
-```bash
-git clone https://github.com/YOUR_USERNAME/chemdataextractor-fork.git cde_n
-```
-
-> **Why a fork?** The original ChemDataExtractor pip package does not include
-> the RSC scraper. Our fork modifies `cde_n/chemdataextractor/scrape/pub/rsc.py`
-> with three changes to `perform_search()`:
-> 1. Switched from Firefox to **headless Chrome** (`--headless`, `--disable-gpu`, `--no-sandbox`)
-> 2. Added a **ChromeDriver path** (configured via `scrape_rsc.py` — see Step 6)
-> 3. Added **date range and Open Access filters** to the RSC search URL
->    (`DateFromYear=2010`, `DateToYear=2024`, `OpenAccess=true`)
->
-> All other CDE code (entity parsers, text processors, document reader) is unchanged.
-
-After cloning, your directory should look like:
-
-```
-YOUR_REPO_NAME/
-├── scrape_rsc.py
-├── cde_n/
-│   └── chemdataextractor/
-│       ├── scrape/pub/rsc.py   ← modified: headless Chrome + date filter
-│       └── ...                 ← everything else unchanged from original CDE
-└── ...
-```
-
-#### Step 3: Create conda environment
-
-```bash
-conda env create -f environment.yml
-conda activate dygiepp
-```
-
-#### Step 4: Install PyTorch with CUDA 11.7
-
-```bash
-pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1+cu117 \
-    -f https://download.pytorch.org/whl/torch_stable.html
-```
-
-> For **CPU only** (no GPU):
-> ```bash
-> pip install torch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1
-> ```
-
-#### Step 5: Install spaCy language models
-
-```bash
-# Small English model (required by cde_n)
-pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz
-
-# Large scientific model (required for --use-scispacy in DyGIE++ preprocessing)
-pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.2.5/en_core_sci_lg-0.2.5.tar.gz
-```
-
-#### Step 6: Install ChromeDriver
-
-The RSC scraper uses Selenium + ChromeDriver internally to query the RSC website.
-The ChromeDriver version must match your installed Google Chrome version.
-
-```bash
-# Check your Chrome version first
-google-chrome --version
-```
-
-Then download the matching ChromeDriver:
-- Chrome 114 and below: https://chromedriver.chromium.org/downloads
-- Chrome 115 and above: https://googlechromelabs.github.io/chrome-for-testing/
-
-`scrape_rsc.py` auto-detects ChromeDriver at these locations:
-```
-/home/<user>/Downloads/chromedriver-linux64/chromedriver-linux64/chromedriver
-/usr/local/bin/chromedriver
-/usr/bin/chromedriver
-```
-
-If yours is elsewhere, pass it explicitly with `--chromedriver`:
-```bash
-python scrape_rsc.py --chromedriver /path/to/chromedriver pages --query "..."
-```
-
----
-
-### Usage
-
-All commands must be run from the project root directory where `cde_n/` is located.
-
-#### `pages` — Find total result pages for a query
-
-Use this first to know how many pages of results exist before scraping.
+### `pages` — find total result pages for a query
 
 ```bash
 python scrape_rsc.py pages --query "ORR catalyst fuel cell"
@@ -164,56 +188,40 @@ Searching RSC for: 'ORR catalyst fuel cell'
   Tip: use --page 1 to 26 with the 'search' command.
 ```
 
-#### `search` — List articles on a page
+### `search` — list articles on a page
 
 ```bash
 # Single page
 python scrape_rsc.py search --query "ORR catalyst fuel cell" --page 1
 
-# Range of pages
-python scrape_rsc.py search --query "ORR catalyst fuel cell" --page 1-5
-
-# Save article list to JSON
-python scrape_rsc.py search --query "ORR catalyst fuel cell" --page 1 --output ./results/
+# Range of pages (saves to JSON)
+python scrape_rsc.py search --query "ORR catalyst fuel cell" --page 1-5 \
+    --output ./results/
 ```
 
-Output:
-```
-Scraping RSC page(s) '1' for: 'ORR catalyst fuel cell'
-  Found 25 articles.
-  [1] Highly active ZIF-8@CNT composite catalysts...
-       DOI: 10.1039/D3IM00081H
-       URL: https://pubs.rsc.org/en/content/articlehtml/...
-  [2] ...
-```
-
-#### `download` — Download one article HTML
+### `download` — download one article HTML
 
 ```bash
 python scrape_rsc.py download --query "ORR catalyst fuel cell" \
     --page 1 --article 2 --output ./articles/
 ```
 
-Downloads the HTML of article #2 from page 1 to `./articles/d3im00081h.html`.
-
-#### `full` — Complete pipeline (recommended)
+### `full` — complete pipeline (recommended)
 
 ```bash
 python scrape_rsc.py full --query "ORR catalyst fuel cell" \
     --page 1 --article 2 --output ./articles/
 ```
 
-Runs all four steps automatically:
-
+Runs all steps automatically:
 ```
-[Step 1] Search RSC → articles/metadata.json
-[Step 2] Download HTML → articles/d3im00081h.html
-[Step 3] Parse with CDE → articles/d3im00081h.json
-[Step 4] Extract sections → articles/d3im00081h.txt
+[Step 1] Search RSC        → articles/metadata.json
+[Step 2] Download HTML     → articles/d3im00081h.html
+[Step 3] Parse with CDE    → articles/d3im00081h.json
+[Step 4] Extract sections  → articles/d3im00081h.txt
 ```
 
-The output `.txt` file contains the structured article text:
-
+The output `.txt` file:
 ```
 Title: Highly active ZIF-8@CNT composite catalysts...
 Publisher: Royal Society of Chemistry
@@ -221,105 +229,139 @@ Date: 2023/10/20
 DOI: 10.1039/D3IM00081H
 
 Abstract:
-Developing non-precious metal-based inexpensive and highly active...
+Developing non-precious metal-based...
 
 Results & Discussion:
-Fig. 1a shows the crystallographic features of as-prepared ZIF-8@CNT...
-The defects in the as-synthesised ZIF-8@CNT catalysts were analysed...
+Fig. 1a shows the crystallographic features...
 [all paragraphs concatenated]
 
 Conclusion:
-Metal-free and transition-metal-doped ZIF-8@CNT catalysts were prepared...
+Metal-free and transition-metal-doped ZIF-8@CNT catalysts...
 ```
 
-This `.txt` file is the input to **Part 2** (DyGIE++ NER/RE prediction).
+This `.txt` file is the input to **Part 2**.
 
 ---
 
-## Part 2: NER/RE Prediction with DyGIE++
+## Part 2: NER/RE Prediction
 
-`predict.py` runs the trained DyGIE++ model on a structured article `.txt` file
-(produced by Part 1) and outputs entities and relations as JSON.
+`predict.py` runs the trained DyGIE++ model on article text and outputs
+recognized entities and relations as JSON.
 
-The model is hosted on Hugging Face at
+The model is hosted on Hugging Face:
 [UPC-HUB/fuelcell-ner-re](https://huggingface.co/UPC-HUB/fuelcell-ner-re)
-and uses [MatSci-BERT](https://huggingface.co/UPC-HUB/matscibert-finetuned-squad)
-as the underlying language model.
 
 DyGIE++ does **not** need to be installed — only AllenNLP (already in the
-`dygiepp` conda environment) is required.
+`fuelcell-ie` conda environment) is required.
 
-The pipeline uses [DyGIE++](https://github.com/dwadden/dygiepp) for joint
-named entity recognition (NER) and relation extraction (RE).
+### Machines with internet access
 
-### Setup
-
-The `dygiepp` conda environment (set up in Part 1) already contains everything needed.
-No additional installation is required.
-
-### Usage
-
-#### Machines with internet access
+The model downloads automatically (~840MB) on first run:
 
 ```bash
-# Model downloads automatically from Hugging Face on first run (~840MB)
+# CPU (mercury — for testing and verification):
 python predict.py --input articles/d3im00081h.txt --output results/
 
-# With GPU (recommended — much faster):
-python predict.py --input articles/d3im00081h.txt --output results/ --cuda 0
+# GPU (htcatg02 — for real use, after model_local.tar.gz is prepared):
+python predict.py --input articles/d3im00081h.txt --output results/ \
+    --model-path ~/model_local.tar.gz --cuda 1
 ```
 
-#### Machines without internet access (HPC, closed networks)
+### Machines without internet access (shared filesystem)
 
-Copy the model from a machine that has internet access:
+In HPC environments where GPU nodes have no internet but share a filesystem
+with an internet-connected machine, download and prepare the model once —
+it is immediately accessible on all nodes.
 
 ```bash
-# Step 1: On the internet-connected machine, download the model
+# ── On mercury (internet access) ──────────────────────────────────────────────
+
+conda activate fuelcell-ie
+cd FuelCell-IE-Pipeline
+
+# Step 1: Download model from Hugging Face (~840MB, once only)
 python -c "
 from huggingface_hub import hf_hub_download
-hf_hub_download(repo_id='UPC-HUB/fuelcell-ner-re', filename='model.tar.gz')
+path = hf_hub_download(repo_id='UPC-HUB/fuelcell-ner-re', filename='model.tar.gz')
+print('Downloaded to:', path)
 "
 
-# Step 2: Copy to the HPC machine
-scp ~/.cache/huggingface/hub/models--UPC-HUB--fuelcell-ner-re/snapshots/*/model.tar.gz     hpc_machine:~/model.tar.gz
-
-# Step 3: Extract MatSci-BERT and create a local model config
+# Step 2: Extract and fix MatSci-BERT path for this machine
 mkdir -p /tmp/model_local && cd /tmp/model_local
-tar -xzf ~/model.tar.gz
+tar -xzf ~/.cache/huggingface/hub/models--UPC-HUB--fuelcell-ner-re/snapshots/*/model.tar.gz
 cp -r matscibert_weights ~/matscibert_weights
 
-# Fix config to use absolute path
-sed -i "s|matscibert_weights|/home/YOUR_USERNAME/matscibert_weights|g" config.json
+sed -i "s|matscibert_weights|/home/$USER/matscibert_weights|g" config.json
 tar -czf ~/model_local.tar.gz config.json weights.th vocabulary/
+cd ~/FuelCell-IE-Pipeline
 
-# Step 4: Run prediction
-python predict.py     --input article.txt     --output results/     --model-path ~/model_local.tar.gz     --cuda 0
+# ── On mercury (CPU, no GPU) ───────────────────────────────────────────────────
+# Works fine for testing — just slower than GPU
+
+python predict.py \
+    --input articles/d3im00081h.txt \
+    --output results/
+    # --cuda -1 is the default (CPU)
+
+# ── On htcatg02 (GPU, shared filesystem — no copy needed) ─────────────────────
+
+rlogin htcatg02
+conda activate fuelcell-ie          # same env, shared filesystem
+cd ~/FuelCell-IE-Pipeline
+
+python predict.py \
+    --input articles/d3im00081h.txt \
+    --output results/ \
+    --model-path ~/model_local.tar.gz \
+    --cuda 1
 ```
 
-#### Full pipeline example (Part 1 → Part 2)
+### Full pipeline example (Part 1 → Part 2)
 
 ```bash
-# Part 1: Scrape and extract article text
-python scrape_rsc.py full     --query "ORR catalyst fuel cell"     --page 1 --article 2     --output ./articles/
+# ── On mercury: Part 1 (internet + Chrome available) ─────────────────────────
+conda activate fuelcell-ie
+cd FuelCell-IE-Pipeline
 
-# Part 2: Run NER/RE prediction
-python predict.py     --input ./articles/d3im00081h.txt     --output ./results/     --cuda 0
+python scrape_rsc.py full \
+    --query "ORR catalyst fuel cell" \
+    --page 1 --article 2 \
+    --output ./articles/
+# → produces: articles/d3im00081h.txt
+
+# ── On mercury: Part 2 CPU (for testing, no GPU needed) ───────────────────────
+python predict.py \
+    --input ./articles/d3im00081h.txt \
+    --output ./results/ \
+    --model-path ~/model_local.tar.gz
+# → produces: results/d3im00081h_entities_relations.json
+
+# ── On htcatg02: Part 2 GPU (for faster/batch processing) ─────────────────────
+# Shared filesystem — no file copying needed
+rlogin htcatg02
+conda activate fuelcell-ie
+cd ~/FuelCell-IE-Pipeline
+
+python predict.py \
+    --input ./articles/d3im00081h.txt \
+    --output ./results/ \
+    --model-path ~/model_local.tar.gz \
+    --cuda 1
+# → produces: results/d3im00081h_entities_relations.json
 ```
 
-#### Output format
-
-The output JSON file contains extracted entities and relations:
+### Output format
 
 ```json
 [
   {
     "doc_key": "d3im00081h",
     "entities": [
-      {"text": "ZIF-8@CNT",           "label": "catalyst",  "sentence_idx": 2},
-      {"text": "carbon nanotube (CNT)","label": "support",   "sentence_idx": 2},
-      {"text": "pyrolysis",            "label": "process",   "sentence_idx": 2},
-      {"text": "900 °C",              "label": "condition", "sentence_idx": 2},
-      {"text": "0.847 V",             "label": "value",     "sentence_idx": 8}
+      {"text": "ZIF-8@CNT",            "label": "catalyst",  "sentence_idx": 2},
+      {"text": "carbon nanotube (CNT)", "label": "support",   "sentence_idx": 2},
+      {"text": "pyrolysis",             "label": "process",   "sentence_idx": 2},
+      {"text": "900 °C",               "label": "condition", "sentence_idx": 2},
+      {"text": "0.847 V",              "label": "value",     "sentence_idx": 8}
     ],
     "relations": [
       {"subject": "ZIF-8@CNT", "relation": "related_to", "object": "carbon nanotube (CNT)"},
@@ -357,7 +399,7 @@ The output JSON file contains extracted entities and relations:
 
 | Repository | Contents | Size |
 |------------|----------|------|
-| [UPC-HUB/fuelcell-ner-re](https://huggingface.co/UPC-HUB/fuelcell-ner-re) | DyGIE++ model weights + MatSci-BERT embedded | 840MB |
+| [UPC-HUB/fuelcell-ner-re](https://huggingface.co/UPC-HUB/fuelcell-ner-re) | DyGIE++ model + MatSci-BERT weights | 840MB |
 | [UPC-HUB/matscibert-finetuned-squad](https://huggingface.co/UPC-HUB/matscibert-finetuned-squad) | MatSci-BERT fine-tuned on SQuAD (standalone) | 418MB |
 
 ---
@@ -382,8 +424,7 @@ Please also cite DyGIE++:
 @inproceedings{wadden-etal-2019-entity,
   title     = {Entity, Relation, and Event Extraction with Contextualized Span Representations},
   author    = {Wadden, David and Wennberg, Ulme and Luan, Yi and Hajishirzi, Hannaneh},
-  booktitle = {Proceedings of the 2019 Conference on Empirical Methods
-               in Natural Language Processing},
+  booktitle = {Proceedings of EMNLP-IJCNLP 2019},
   year      = {2019}
 }
 ```
@@ -410,6 +451,5 @@ And ChemDataExtractor:
 Code in this repository is released under the **MIT License**.
 Sample data annotations are released under **CC BY 4.0**.
 
-> The full annotated corpus is not released due to RSC copyright restrictions
-> on article content. The sample data provided is sufficient to reproduce
-> the pipeline end-to-end.
+> The full annotated corpus is not released due to RSC copyright restrictions.
+> The sample data is sufficient to reproduce the pipeline end-to-end.
