@@ -92,7 +92,31 @@ FuelCell-IE-Pipeline/
 > 2. Uses **chromedriver-autoinstaller** (no manual driver download needed)
 > 3. Added **date range and Open Access filters** (2010–2024) to RSC search URL
 
-### Step 3: Create conda environment
+### Step 3: Clone DyGIE++ repository
+
+`predict.py` requires the DyGIE++ repository for the `dygie` package.
+Clone it **inside the project directory**:
+
+```bash
+git clone https://github.com/dwadden/dygiepp.git
+```
+
+Your directory should now look like:
+```
+FuelCell-IE-Pipeline/
+├── scrape_rsc.py
+├── predict.py
+├── cde_n/
+├── dygiepp/          ← required for predict.py
+└── ...
+```
+
+> If you clone `dygiepp` elsewhere, set the environment variable:
+> ```bash
+> DYGIEPP_DIR=/path/to/dygiepp python predict.py --input article.txt ...
+> ```
+
+### Step 4: Create conda environment
 
 ```bash
 conda env create -f environment.yml
@@ -101,7 +125,7 @@ conda activate fuelcell-ie
 
 > If you prefer pip, see [pip installation](#pip-installation-alternative).
 
-### Step 4: Install PyTorch
+### Step 5: Install PyTorch
 
 Install **after** activating the environment.
 
@@ -122,7 +146,7 @@ pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1+cu1
 > with CUDA older than 11.7 — it installs CUDA 11.7 libraries that may conflict
 > with the system CUDA. Always use `+cpu` or `+cu117` explicitly.
 
-### Step 5: Install spaCy language models
+### Step 6: Install spaCy language models
 
 ```bash
 # English model — required by cde_n for RSC scraping (Part 1)

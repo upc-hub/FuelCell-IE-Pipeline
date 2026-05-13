@@ -8,7 +8,8 @@ Runs the trained DyGIE++ NER/RE model on a structured article text file
 relations as JSON.
 
 The model is downloaded automatically from Hugging Face on first run.
-DyGIE++ does NOT need to be installed — only AllenNLP is required.
+Requires the DyGIE++ repository to be cloned (for the 'dygie' package).
+See README for setup instructions.
 
 Usage
 ─────
@@ -46,6 +47,15 @@ HF_FILENAME = "model.tar.gz"
 # ── Dataset name used during training ────────────────────────────────────────
 # Matches the prefix in vocabulary/fuelcell__ner_labels.txt
 DATASET_NAME = "fuelcell"
+
+# ── DyGIE++ repo directory ────────────────────────────────────────────────────
+# The 'dygie' package lives inside the DyGIE++ repo.
+# Set via environment variable DYGIEPP_DIR or auto-detected if repo is cloned
+# in the same directory as this script.
+DYGIEPP_DIR = os.environ.get(
+    "DYGIEPP_DIR",
+    os.path.join(os.path.dirname(os.path.abspath(__file__)), "dygiepp")
+)
 
 
 # ─── Step 1: Get model path ───────────────────────────────────────────────────
@@ -166,9 +176,20 @@ def run_allennlp_predict(
     cuda_device: int = -1,
 ) -> None:
     """
-    Run AllenNLP predict — no DyGIE++ repo required.
-    The dygie predictor is registered inside allennlp-models (already installed).
+    Run AllenNLP predict using the DyGIE++ repo for the 'dygie' package.
+
+    The 'dygie' package is not installable via pip — it lives inside the
+    DyGIE++ repository. We run the command from inside that directory so
+    Python can find it, or set DYGIEPP_DIR environment variable.
     """
+    if not os.path.isdir(DYGIEPP_DIR):
+        print(f"[Error] DyGIE++ directory not found at: {DYGIEPP_DIR}")
+        print("  Clone it with:")
+        print("    git clone https://github.com/dwadden/dygiepp.git")
+        print("  Or set the DYGIEPP_DIR environment variable:")
+        print("    DYGIEPP_DIR=/path/to/dygiepp python predict.py ...")
+        sys.exit(1)
+
     cmd = [
         sys.executable, "-m", "allennlp", "predict",
         model_path,
@@ -181,7 +202,8 @@ def run_allennlp_predict(
         "--silent",
     ]
     print(f"  Command: allennlp predict ... (cuda={cuda_device})")
-    result = subprocess.run(cmd, capture_output=True, text=True)
+    print(f"  DyGIE++ dir: {DYGIEPP_DIR}")
+    result = subprocess.run(cmd, capture_output=True, text=True, cwd=DYGIEPP_DIR)
 
     if result.returncode != 0:
         print("[Error] AllenNLP predict failed:")
