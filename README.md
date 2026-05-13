@@ -28,7 +28,7 @@ FuelCell-IE-Pipeline/
 ├── predict.py             # Part 2: DyGIE++ NER/RE prediction
 ├── cde_n/                 # Custom ChemdataExtractor fork (cloned separately)
 │   └── chemdataextractor/
-│       ├── scrape/pub/rsc.py   ← modified for headless Chrome + date filter
+│       ├── scrape/pub/rsc.py   ← modified: headless Chrome + date filter
 │       └── ...
 ├── configs/
 │   └── fuelcell.jsonnet   # AllenNLP training configuration (reference only)
@@ -46,18 +46,17 @@ FuelCell-IE-Pipeline/
 
 ---
 
+## Requirements
+
+- Linux (Ubuntu 18.04+ recommended) or macOS
+- [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or Anaconda
+- Google Chrome browser
+- Internet access (for Part 1 RSC scraping and model download)
+- GPU with CUDA 11.7 (optional — CPU works but is slower for Part 2)
+
+---
+
 ## Environment Setup
-
-Both `scrape_rsc.py` and `predict.py` run in a **single conda environment**
-named `fuelcell-ie`. All setup steps are run on **mercury** unless noted.
-
-> **Machine setup used in this work:**
-> - `mercury` — internet access, Chrome installed, NVIDIA T400 (CUDA 11.6, 2GB)
->   → runs Part 1 and Part 2 CPU (testing)
-> - `htcatg02` — NVIDIA GPU with CUDA 11.7, shares filesystem with mercury
->   → runs Part 2 GPU (production)
->
-> If your setup differs, adjust machine names accordingly.
 
 ### Step 1: Clone this repository
 
@@ -79,6 +78,7 @@ Your directory should now look like:
 ```
 FuelCell-IE-Pipeline/
 ├── scrape_rsc.py
+├── predict.py
 ├── cde_n/
 │   └── chemdataextractor/
 │       └── scrape/pub/rsc.py
@@ -86,10 +86,11 @@ FuelCell-IE-Pipeline/
 ```
 
 > **What was modified in cde_n?**
-> Only `cde_n/chemdataextractor/scrape/pub/rsc.py` was changed — three modifications
-> to `perform_search()`: switched from Firefox to headless Chrome, added ChromeDriver
-> path, and added date range + Open Access filters (2010–2024) to the RSC search URL.
-> All other CDE code is unchanged from the original.
+> Only `cde_n/chemdataextractor/scrape/pub/rsc.py` — three changes to
+> `perform_search()`:
+> 1. Switched from Firefox to **headless Chrome**
+> 2. Uses **chromedriver-autoinstaller** (no manual driver download needed)
+> 3. Added **date range and Open Access filters** (2010–2024) to RSC search URL
 
 ### Step 3: Create conda environment
 
@@ -98,23 +99,23 @@ conda env create -f environment.yml
 conda activate fuelcell-ie
 ```
 
-> If you prefer pip over conda, see [pip installation](#pip-installation-alternative) below.
+> If you prefer pip, see [pip installation](#pip-installation-alternative).
 
 ### Step 4: Install PyTorch
 
-Install **after** activating the environment.
+Install **after** activating the environment:
 
 ```bash
-# On mercury (CUDA 11.6 — model requires 11.7, so use CPU version):
-pip install torch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1
-
-# On htcatg02 (CUDA 11.7 — GPU inference for Part 2):
+# GPU (CUDA 11.7) — recommended for Part 2:
 pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1+cu117 \
     -f https://download.pytorch.org/whl/torch_stable.html
+
+# CPU only (works but Part 2 will be slow):
+pip install torch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1
 ```
 
-> Mercury has an NVIDIA T400 (CUDA 11.6, 2GB VRAM). Since the model requires
-> CUDA 11.7 and needs more than 2GB VRAM, use CPU on mercury and GPU on htcatg02.
+> The warning `allennlp 1.1.0 requires torch<1.7.0` can be safely ignored —
+> torch 1.13.1 works correctly with this model.
 
 ### Step 5: Install spaCy language models
 
@@ -126,34 +127,35 @@ pip install https://github.com/explosion/spacy-models/releases/download/en_core_
 pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.3.0/en_core_sci_lg-0.3.0.tar.gz
 ```
 
-### Step 6: Chrome browser
+### Step 6: Verify Chrome is installed
 
-`scrape_rsc.py` uses Selenium to query the RSC website. ChromeDriver is
-**installed automatically** via `chromedriver-autoinstaller` (included in
-the conda environment) — no manual driver download needed.
-
-You only need Google Chrome installed on the machine:
+`scrape_rsc.py` uses Selenium + Chrome. ChromeDriver is installed
+**automatically** via `chromedriver-autoinstaller` — no manual download needed.
 
 ```bash
 # Verify Chrome is available
-google-chrome --version
+google-chrome --version    # Linux
+# or: /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --version  # macOS
 ```
 
-> If you need to use a specific ChromeDriver path, pass it with `--chromedriver`:
-> ```bash
-> python scrape_rsc.py --chromedriver /path/to/chromedriver pages --query "..."
-> ```
+If Chrome is not installed:
+```bash
+# Ubuntu/Debian
+wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo apt-get install google-chrome-stable
+```
 
 ---
 
 ## pip Installation Alternative
 
-If conda is not available, use `requirements.txt` instead:
+If conda is not available (use `requirements.txt` instead of `environment.yml`):
 
 ```bash
 # Python 3.7 required
 pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1+cu117 \
-    -f https://download.pytorch.org/whl/torch_stable.html
+    -f https://download.pytorch.org/whl/torch_stable.html   # GPU
+# or: pip install torch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1  # CPU
 
 pip install -r requirements.txt
 
@@ -161,7 +163,7 @@ pip install https://github.com/explosion/spacy-models/releases/download/en_core_
 pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.3.0/en_core_sci_lg-0.3.0.tar.gz
 ```
 
-> **Note:** If you are using conda (recommended), ignore `requirements.txt` —
+> **Note:** If you use conda, ignore `requirements.txt` —
 > `environment.yml` already covers everything.
 
 ---
@@ -169,8 +171,7 @@ pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.3.0/e
 ## Part 1: RSC Article Scraper
 
 `scrape_rsc.py` searches RSC, downloads article HTML, and extracts structured
-text sections (abstract, results & discussion, conclusion) using the `cde_n`
-ChemdataExtractor fork.
+text (abstract, results & discussion, conclusion) using the `cde_n` fork.
 
 Run all commands from the project root directory where `cde_n/` is located.
 
@@ -233,7 +234,6 @@ Developing non-precious metal-based...
 
 Results & Discussion:
 Fig. 1a shows the crystallographic features...
-[all paragraphs concatenated]
 
 Conclusion:
 Metal-free and transition-metal-doped ZIF-8@CNT catalysts...
@@ -246,107 +246,87 @@ This `.txt` file is the input to **Part 2**.
 ## Part 2: NER/RE Prediction
 
 `predict.py` runs the trained DyGIE++ model on article text and outputs
-recognized entities and relations as JSON.
+entities and relations as JSON.
 
 The model is hosted on Hugging Face:
 [UPC-HUB/fuelcell-ner-re](https://huggingface.co/UPC-HUB/fuelcell-ner-re)
 
-DyGIE++ does **not** need to be installed — only AllenNLP (already in the
-`fuelcell-ie` conda environment) is required.
+DyGIE++ does **not** need to be installed — only AllenNLP (already in
+the `fuelcell-ie` conda environment) is required.
 
-### Machines with internet access
-
-The model downloads automatically (~840MB) on first run:
+### Basic usage
 
 ```bash
-# CPU (mercury — for testing and verification):
+# Download model automatically on first run (~840MB) and run on CPU:
 python predict.py --input articles/d3im00081h.txt --output results/
 
-# GPU (htcatg02 — for real use, after model_local.tar.gz is prepared):
-python predict.py --input articles/d3im00081h.txt --output results/ \
-    --model-path ~/model_local.tar.gz --cuda 1
+# Run on GPU (recommended — much faster):
+python predict.py --input articles/d3im00081h.txt --output results/ --cuda 0
 ```
 
-### Machines without internet access (shared filesystem)
+### First-run model setup
 
-In HPC environments where GPU nodes have no internet but share a filesystem
-with an internet-connected machine, download and prepare the model once —
-it is immediately accessible on all nodes.
+On first run, `predict.py` downloads the model from Hugging Face and caches
+it in `~/.cache/huggingface/hub/`. Subsequent runs use the cache directly.
+
+If you want to pre-download the model manually:
 
 ```bash
-# ── On mercury (internet access) ──────────────────────────────────────────────
-
-conda activate fuelcell-ie
-cd FuelCell-IE-Pipeline
-
-# Step 1: Download model from Hugging Face (~840MB, once only)
 python -c "
 from huggingface_hub import hf_hub_download
 path = hf_hub_download(repo_id='UPC-HUB/fuelcell-ner-re', filename='model.tar.gz')
-print('Downloaded to:', path)
+print('Model cached at:', path)
+"
+```
+
+### Machines without internet access
+
+If your machine has no internet (e.g. HPC GPU nodes), download the model
+on an internet-connected machine first, then prepare a local copy:
+
+```bash
+# Step 1: On an internet-connected machine — download and prepare
+python -c "
+from huggingface_hub import hf_hub_download
+hf_hub_download(repo_id='UPC-HUB/fuelcell-ner-re', filename='model.tar.gz')
 "
 
-# Step 2: Extract and fix MatSci-BERT path for this machine
 mkdir -p /tmp/model_local && cd /tmp/model_local
 tar -xzf ~/.cache/huggingface/hub/models--UPC-HUB--fuelcell-ner-re/snapshots/*/model.tar.gz
 cp -r matscibert_weights ~/matscibert_weights
 
-sed -i "s|matscibert_weights|/home/$USER/matscibert_weights|g" config.json
+# Replace relative path with absolute path for your machine
+sed -i "s|matscibert_weights|$HOME/matscibert_weights|g" config.json
 tar -czf ~/model_local.tar.gz config.json weights.th vocabulary/
-cd ~/FuelCell-IE-Pipeline
 
-# ── On mercury (CPU, no GPU) ───────────────────────────────────────────────────
-# Works fine for testing — just slower than GPU
+# Step 2: Copy model_local.tar.gz to the no-internet machine
+# (via scp, shared filesystem, USB, etc.)
 
-python predict.py \
-    --input articles/d3im00081h.txt \
-    --output results/
-    # --cuda -1 is the default (CPU)
-
-# ── On htcatg02 (GPU, shared filesystem — no copy needed) ─────────────────────
-
-rlogin htcatg02
-conda activate fuelcell-ie          # same env, shared filesystem
-cd ~/FuelCell-IE-Pipeline
-
+# Step 3: Run on the no-internet machine
 python predict.py \
     --input articles/d3im00081h.txt \
     --output results/ \
     --model-path ~/model_local.tar.gz \
-    --cuda 1
+    --cuda 0
 ```
 
 ### Full pipeline example (Part 1 → Part 2)
 
 ```bash
-# ── On mercury: Part 1 (internet + Chrome available) ─────────────────────────
 conda activate fuelcell-ie
 cd FuelCell-IE-Pipeline
 
+# Part 1: scrape and extract article text
 python scrape_rsc.py full \
     --query "ORR catalyst fuel cell" \
     --page 1 --article 2 \
     --output ./articles/
 # → produces: articles/d3im00081h.txt
 
-# ── On mercury: Part 2 CPU (for testing, no GPU needed) ───────────────────────
+# Part 2: run NER/RE prediction
 python predict.py \
     --input ./articles/d3im00081h.txt \
-    --output ./results/ \
-    --model-path ~/model_local.tar.gz
-# → produces: results/d3im00081h_entities_relations.json
-
-# ── On htcatg02: Part 2 GPU (for faster/batch processing) ─────────────────────
-# Shared filesystem — no file copying needed
-rlogin htcatg02
-conda activate fuelcell-ie
-cd ~/FuelCell-IE-Pipeline
-
-python predict.py \
-    --input ./articles/d3im00081h.txt \
-    --output ./results/ \
-    --model-path ~/model_local.tar.gz \
-    --cuda 1
+    --output ./results/
 # → produces: results/d3im00081h_entities_relations.json
 ```
 
@@ -452,4 +432,4 @@ Code in this repository is released under the **MIT License**.
 Sample data annotations are released under **CC BY 4.0**.
 
 > The full annotated corpus is not released due to RSC copyright restrictions.
-> The sample data is sufficient to reproduce the pipeline end-to-end.
+> The sample data provided is sufficient to reproduce the pipeline end-to-end.

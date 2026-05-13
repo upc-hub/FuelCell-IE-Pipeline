@@ -47,6 +47,7 @@ from typing import Dict, List, Optional, Tuple, Union
 import requests
 from requests.exceptions import ConnectionError, Timeout
 
+import chromedriver_autoinstaller
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
@@ -243,20 +244,11 @@ def get_pages(query: str, chromedriver_path: Optional[str] = None) -> Tuple[int,
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.add_argument("--dns-prefetch-disable")
 
-    if not chromedriver_path:
-        candidates = [
-            "/home/hein/Downloads/chromedriver-linux64/chromedriver-linux64/chromedriver",
-            "/usr/local/bin/chromedriver",
-            "/usr/bin/chromedriver",
-        ]
-        for candidate in candidates:
-            if os.path.isfile(candidate):
-                chromedriver_path = candidate
-                break
-
+    # Auto-install matching ChromeDriver or use explicitly provided path
     if chromedriver_path:
         driver = webdriver.Chrome(executable_path=chromedriver_path, options=chrome_options)
     else:
+        chromedriver_autoinstaller.install()  # downloads driver matching installed Chrome
         driver = webdriver.Chrome(options=chrome_options)
 
     encoded_query = urllib.parse.quote(query)

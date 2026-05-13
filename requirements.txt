@@ -38,19 +38,12 @@ thinc==7.4.1
 catalogue==1.0.2
 srsly==1.0.7
 wasabi==0.10.1
-spacy-legacy==3.0.12
-langcodes==3.3.0
-pydantic==1.10.2
-smart-open==6.4.0
-typer==0.7.0
-confection==0.1.5
-pathy==0.10.3
-weasel==0.4.1
 spacy==2.3.1
 nmslib==2.1.1
 scispacy==0.2.5
 
 # RSC scraping
+chromedriver-autoinstaller==0.6.4
 selenium==3.141.0
 requests==2.31.0
 beautifulsoup4==4.11.1

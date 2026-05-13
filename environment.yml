@@ -55,6 +55,7 @@ dependencies:
       #   en_core_sci_lg-0.3.0  — used by predict.py (scientific tokenisation)
 
       # ── RSC scraping (scrape_rsc.py) ──────────────────────────────────────
+      - chromedriver-autoinstaller==0.6.4
       - selenium==3.141.0
       - requests==2.31.0
       - beautifulsoup4==4.11.1
