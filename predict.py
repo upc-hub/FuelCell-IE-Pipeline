@@ -226,7 +226,9 @@ def parse_predictions(raw_jsonl: str, output_json: str) -> List[Dict]:
     Convert raw DyGIE++ JSONL output into clean, readable JSON.
 
     DyGIE++ token indices are global (across all sentences in the doc).
-    We convert them back to sentence-local indices to extract span text.
+    We convert them to character offsets (start/end) matching brat annotation
+    format — i.e. character position of the first and last character of the span
+    within the sentence text.
     """
     results = []
 
@@ -245,6 +247,7 @@ def parse_predictions(raw_jsonl: str, output_json: str) -> List[Dict]:
                 "doc_key":   doc.get("doc_key", "unknown"),
                 "entities":  [],
                 "relations": [],
+                "sentences": [],   # filled after processing all sentences
             }
 
             token_offset = 0  # cumulative token count across sentences
@@ -253,18 +256,31 @@ def parse_predictions(raw_jsonl: str, output_json: str) -> List[Dict]:
                 sent_ner  = ner_preds[sent_idx] if sent_idx < len(ner_preds)  else []
                 sent_rels = rel_preds[sent_idx] if sent_idx < len(rel_preds)  else []
 
+                # Compute character offset of each token within the sentence
+                # Tokens are joined by single spaces (as written by txt_to_dygiepp_input)
+                sent_char_offsets = []
+                pos = 0
+                for tok in sent_tokens:
+                    sent_char_offsets.append(pos)
+                    pos += len(tok) + 1  # +1 for the space between tokens
+
                 # ── Entities ──────────────────────────────────────────────────
                 for span in sent_ner:
                     g_start, g_end, label = span[0], span[1], span[2]
+                    # Convert global token indices to sentence-local
                     l_start = max(0, min(g_start - token_offset, len(sent_tokens) - 1))
                     l_end   = max(0, min(g_end   - token_offset, len(sent_tokens) - 1))
                     span_text = " ".join(sent_tokens[l_start : l_end + 1])
+                    # Compute character offsets within the sentence
+                    # (matches brat annotation format: Z position to T position)
+                    char_start = sent_char_offsets[l_start]
+                    char_end   = sent_char_offsets[l_end] + len(sent_tokens[l_end]) - 1
                     doc_result["entities"].append({
                         "text":         span_text,
                         "label":        label,
                         "sentence_idx": sent_idx,
-                        "token_start":  g_start,
-                        "token_end":    g_end,
+                        "char_start":   char_start,
+                        "char_end":     char_end,
                     })
 
                 # ── Relations ─────────────────────────────────────────────────
@@ -289,6 +305,12 @@ def parse_predictions(raw_jsonl: str, output_json: str) -> List[Dict]:
                     })
 
                 token_offset += len(sent_tokens)
+
+            # Add sentences for reference (indexed by sentence_idx)
+            doc_result["sentences"] = [
+                {"sentence_idx": i, "text": " ".join(tokens), "tokens": tokens}
+                for i, tokens in enumerate(sentences)
+            ]
 
             results.append(doc_result)
 
