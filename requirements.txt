@@ -5,8 +5,8 @@
 #
 # pip install order:
 # Step 1: PyTorch first
-#   CPU (mercury): pip install torch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1
-#   GPU (htcatg02): pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1+cu117
+#   CPU : pip install torch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1
+#   GPU : pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1+cu117
 #                      -f https://download.pytorch.org/whl/torch_stable.html
 # Step 2: pip install -r requirements.txt
 # Step 3: Install spaCy models (see README Step 5)

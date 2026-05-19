@@ -2,7 +2,7 @@
 #   conda env create -f environment.yml
 #   conda activate fuelcell-ie
 #
-# Then install PyTorch separately (see README Step 4).
+# Then install PyTorch separately (see README Step 3).
 # The environment is accessible on all mounted machines (htcat, htcatg02).
 name: fuelcell-ie
 channels:
@@ -23,7 +23,7 @@ dependencies:
       - plac==1.1.3
       - pysbd==0.3.4
 
-      # ── PyTorch — install AFTER conda env create (see README Step 4) ──────
+      # ── PyTorch — install AFTER conda env create (see README Step 3) ──────
       # CPU only (no CUDA conflicts, works on any machine):
       #   pip install torch==1.13.1+cpu torchvision==0.14.1+cpu torchaudio==0.13.1+cpu
       #       -f https://download.pytorch.org/whl/torch_stable.html
@@ -51,7 +51,7 @@ dependencies:
       - spacy==2.3.1
       - nmslib==2.1.1
       - scispacy==0.2.5
-      # Language models installed separately (see README Step 5):
+      # Language models installed separately (see README Step 4):
       #   en_core_web_sm-2.3.1  — used by cde_n (RSC scraper)
       #   en_core_sci_lg-0.3.0  — used by predict.py (scientific tokenisation)
 

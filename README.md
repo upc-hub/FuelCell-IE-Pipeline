@@ -17,9 +17,28 @@ Information extraction pipeline for ORR catalyst literature — scrapes RSC arti
 
 ---
 
+## Repository Structure
+
+After completing all setup steps, your directory should look like this:
+
+```
+FuelCell-IE-Pipeline/
+├── README.md
+├── environment.yml        # Conda environment
+├── requirements.txt       # pip alternative
+├── scrape_rsc.py          # Part 1: RSC scraper
+├── predict.py             # Part 2: NER/RE prediction
+├── cde_n/                 # ChemdataExtractor fork (cloned in Step 1)
+│   └── chemdataextractor/
+│       └── scrape/pub/rsc.py
+└── dygiepp/               # DyGIE++ repository (cloned in Step 1)
+```
+
+---
+
 ## Setup
 
-### 1. Clone repositories
+### Step 1: Clone repositories
 
 ```bash
 git clone https://github.com/upc-hub/FuelCell-IE-Pipeline.git
@@ -32,14 +51,14 @@ git clone https://github.com/upc-hub/chemdataextractor-fork.git cde_n
 git clone https://github.com/dwadden/dygiepp.git
 ```
 
-### 2. Create conda environment
+### Step 2: Create conda environment
 
 ```bash
 conda env create -f environment.yml
 conda activate fuelcell-ie
 ```
 
-### 3. Install PyTorch
+### Step 3: Install PyTorch
 
 ```bash
 # CPU (works on any machine):
@@ -53,14 +72,14 @@ pip install torch==1.13.1+cpu torchvision==0.14.1+cpu torchaudio==0.13.1+cpu \
 
 > The warning `allennlp 1.1.0 requires torch<1.7.0` can be safely ignored.
 
-### 4. Install spaCy models
+### Step 4: Install spaCy models
 
 ```bash
 pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz
 pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.3.0/en_core_sci_lg-0.3.0.tar.gz
 ```
 
-### 5. Install ChromeDriver
+### Step 5: Install ChromeDriver
 
 ChromeDriver is installed automatically — you only need Google Chrome:
 
@@ -109,28 +128,35 @@ Conclusion:
 Model: [UPC-HUB/fuelcell-ner-re](https://huggingface.co/UPC-HUB/fuelcell-ner-re) (~840MB, downloads automatically on first run)
 
 ```bash
-# CPU (model downloads automatically):
+# CPU (model downloads automatically on first run):
 python predict.py --input articles/d3im00081h.txt --output results/
 
-# GPU:
+# GPU — CUDA 11.7 only:
 python predict.py --input articles/d3im00081h.txt --output results/ --cuda 0
-
-# Local model (no internet):
-python predict.py --input articles/d3im00081h.txt --output results/ \
-    --model-path ~/model_local.tar.gz
 ```
 
 ### No-internet setup (e.g. HPC GPU nodes)
 
-```bash
-# On internet-connected machine:
-python -c "from huggingface_hub import hf_hub_download; hf_hub_download(repo_id='UPC-HUB/fuelcell-ner-re', filename='model.tar.gz')"
+On an internet-connected machine, download and prepare the model:
 
+```bash
+# Download model
+python -c "from huggingface_hub import hf_hub_download; \
+hf_hub_download(repo_id='UPC-HUB/fuelcell-ner-re', filename='model.tar.gz')"
+
+# Extract and fix path
 mkdir -p /tmp/model_local && cd /tmp/model_local
 tar -xzf ~/.cache/huggingface/hub/models--UPC-HUB--fuelcell-ner-re/snapshots/*/model.tar.gz
 cp -r matscibert_weights ~/matscibert_weights
 sed -i "s|matscibert_weights|$HOME/matscibert_weights|g" config.json
 tar -czf ~/model_local.tar.gz config.json weights.th vocabulary/
+```
+
+Then on the no-internet machine (copy `~/model_local.tar.gz` via shared filesystem or `scp`):
+
+```bash
+python predict.py --input articles/d3im00081h.txt --output results/ \
+    --model-path ~/model_local.tar.gz --cuda 0
 ```
 
 ### Output format
@@ -168,7 +194,18 @@ tar -czf ~/model_local.tar.gz config.json weights.th vocabulary/
 
 ---
 
+## Hugging Face Model Repositories
+
+| Repository | Contents | Size |
+|------------|----------|------|
+| [UPC-HUB/fuelcell-ner-re](https://huggingface.co/UPC-HUB/fuelcell-ner-re) | DyGIE++ model + MatSci-BERT weights | 840MB |
+| [UPC-HUB/matscibert-finetuned-squad](https://huggingface.co/UPC-HUB/matscibert-finetuned-squad) | MatSci-BERT fine-tuned on SQuAD (standalone) | 418MB |
+
+---
+
 ## Citation
+
+If you use this code or data, please cite:
 
 ```bibtex
 @article{htet2026fuelcell,
@@ -180,7 +217,31 @@ tar -czf ~/model_local.tar.gz config.json weights.th vocabulary/
 }
 ```
 
-Please also cite [DyGIE++](https://github.com/dwadden/dygiepp) and [ChemDataExtractor](https://github.com/mcs07/ChemDataExtractor) if you use this pipeline.
+Please also cite DyGIE++:
+
+```bibtex
+@inproceedings{wadden-etal-2019-entity,
+  title     = {Entity, Relation, and Event Extraction with Contextualized Span Representations},
+  author    = {Wadden, David and Wennberg, Ulme and Luan, Yi and Hajishirzi, Hannaneh},
+  booktitle = {Proceedings of EMNLP-IJCNLP 2019},
+  year      = {2019}
+}
+```
+
+And ChemDataExtractor:
+
+```bibtex
+@article{swain2016chemdataextractor,
+  title   = {ChemDataExtractor: A Toolkit for Automated Chemical Information
+             Extraction from the Scientific Literature},
+  author  = {Swain, Matthew C. and Cole, Jacqueline M.},
+  journal = {Journal of Chemical Information and Modeling},
+  volume  = {56},
+  number  = {10},
+  pages   = {1894--1904},
+  year    = {2016}
+}
+```
 
 ---
 
