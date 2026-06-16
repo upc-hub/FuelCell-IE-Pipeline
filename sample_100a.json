@@ -1,0 +1,7780 @@
+[
+  {
+    "sent_id": "10_11",
+    "orig_doc_key": "38_B__c6ra16606g",
+    "orig_sent_ix": 92,
+    "text": "The crystallite lengths range from 13.8 nm for C600 up to 17.4 nm for C900 ( Fig. 4c ) .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "structure",
+          "text": "crystallite"
+        },
+        {
+          "id": "T2",
+          "label": "property",
+          "text": "lengths"
+        },
+        {
+          "id": "T3",
+          "label": "value",
+          "text": "range from 13.8 nm"
+        },
+        {
+          "id": "T4",
+          "label": "support",
+          "text": "C600"
+        },
+        {
+          "id": "T5",
+          "label": "value",
+          "text": "up to 17.4 nm"
+        },
+        {
+          "id": "T6",
+          "label": "support",
+          "text": "C900"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T5"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "11_0",
+    "orig_doc_key": "13_A__d4ey00084f",
+    "orig_sent_ix": 98,
+    "text": "Another factor could be the dissolution of Sr that can occur for perovskites such as LSM at ORR potentials .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "structure",
+          "text": "Sr"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "dissolution"
+        },
+        {
+          "id": "T3",
+          "label": "structure",
+          "text": "perovskites"
+        },
+        {
+          "id": "T4",
+          "label": "catalyst",
+          "text": "LSM"
+        },
+        {
+          "id": "T5",
+          "label": "condition",
+          "text": "ORR potentials"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T5"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "11_1",
+    "orig_doc_key": "13_A__d4ey00084f",
+    "orig_sent_ix": 124,
+    "text": "The addition of LSM to BSCF also leads to enhanced Co reduction during the ORR and increased ORR activity .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "catalyst",
+          "text": "BSCF"
+        },
+        {
+          "id": "T2",
+          "label": "catalyst",
+          "text": "LSM"
+        },
+        {
+          "id": "T3",
+          "label": "process",
+          "text": "addition"
+        },
+        {
+          "id": "T4",
+          "label": "value",
+          "text": "enhanced"
+        },
+        {
+          "id": "T5",
+          "label": "structure",
+          "text": "Co"
+        },
+        {
+          "id": "T6",
+          "label": "property",
+          "text": "reduction"
+        },
+        {
+          "id": "T7",
+          "label": "condition",
+          "text": "ORR"
+        },
+        {
+          "id": "T8",
+          "label": "value",
+          "text": "increased"
+        },
+        {
+          "id": "T9",
+          "label": "property",
+          "text": "ORR activity"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T9"
+        },
+        {
+          "type": "related_to",
+          "from": "T9",
+          "to": "T8"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "11_2",
+    "orig_doc_key": "13_A__d4ey00084f",
+    "orig_sent_ix": 138,
+    "text": "It was shown that carbon is essential to achieve high current densities in AEMFC but is detrimental to AEMWE .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "additive",
+          "text": "carbon"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "essential"
+        },
+        {
+          "id": "T3",
+          "label": "other_material",
+          "text": "AEMFC"
+        },
+        {
+          "id": "T4",
+          "label": "other_material",
+          "text": "AEMWE"
+        },
+        {
+          "id": "T5",
+          "label": "property",
+          "text": "current densities"
+        },
+        {
+          "id": "T6",
+          "label": "value",
+          "text": "high"
+        },
+        {
+          "id": "T7",
+          "label": "value",
+          "text": "detrimental"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T7"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "11_9",
+    "orig_doc_key": "60_C__d2ta00925k",
+    "orig_sent_ix": 19,
+    "text": "Transmetalation was then carried out in an anhydrous methanolic solution of FeCl2 , under reflux at 80 ° C .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "condition",
+          "text": "anhydrous methanolic solution"
+        },
+        {
+          "id": "T2",
+          "label": "precursors",
+          "text": "FeCl2"
+        },
+        {
+          "id": "T3",
+          "label": "condition",
+          "text": "reflux"
+        },
+        {
+          "id": "T4",
+          "label": "value",
+          "text": "80 ° C"
+        },
+        {
+          "id": "T5",
+          "label": "process",
+          "text": "Transmetalation"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T4"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "12_0",
+    "orig_doc_key": "09_A__c9ra04677a",
+    "orig_sent_ix": 15,
+    "text": "Figure S1 shows that the particle size varies in the range of 3 to10 nm with maxima at 4–5 nm .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "property",
+          "text": "particle size"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "range of 3 to10 nm"
+        },
+        {
+          "id": "T3",
+          "label": "property",
+          "text": "maxima"
+        },
+        {
+          "id": "T4",
+          "label": "value",
+          "text": "4–5 nm"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T4"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "12_1",
+    "orig_doc_key": "09_A__c9ra04677a",
+    "orig_sent_ix": 35,
+    "text": "It seems the reducing atmosphere in the polyol medium did not allow the formation MnO2 phase in the present method .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "structure",
+          "text": "MnO2 phase"
+        },
+        {
+          "id": "T2",
+          "label": "property",
+          "text": "formation"
+        },
+        {
+          "id": "T3",
+          "label": "value",
+          "text": "not allow"
+        },
+        {
+          "id": "T4",
+          "label": "condition",
+          "text": "reducing atmosphere"
+        },
+        {
+          "id": "T5",
+          "label": "condition",
+          "text": "polyol medium"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T4"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "13_2",
+    "orig_doc_key": "51_B__d2sc04461g",
+    "orig_sent_ix": 23,
+    "text": "Due to the low contents of noble elements , their mapping contrasts are relatively weak compared with the non-noble ones .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "value",
+          "text": "low"
+        },
+        {
+          "id": "T2",
+          "label": "property",
+          "text": "contents"
+        },
+        {
+          "id": "T3",
+          "label": "structure",
+          "text": "noble elements"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T1"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "14_1",
+    "orig_doc_key": "50_B__c7ra05634f",
+    "orig_sent_ix": 7,
+    "text": "The strong ( 100 ) peak at 35.8 ° suggests the ordered stacking of nanosheets in the flower-like WN nanostructures .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "property",
+          "text": "peak"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "strong"
+        },
+        {
+          "id": "T3",
+          "label": "value",
+          "text": "35.8 °"
+        },
+        {
+          "id": "T4",
+          "label": "structure",
+          "text": "( 100 )"
+        },
+        {
+          "id": "T5",
+          "label": "structure",
+          "text": "flower-like WN nanostructures"
+        },
+        {
+          "id": "T6",
+          "label": "structure",
+          "text": "nanosheets"
+        },
+        {
+          "id": "T7",
+          "label": "value",
+          "text": "ordered"
+        },
+        {
+          "id": "T8",
+          "label": "property",
+          "text": "stacking"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T8",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T1"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "15_13",
+    "orig_doc_key": "51_B__d2sc04461g",
+    "orig_sent_ix": 6,
+    "text": "This work shows an important route to prepare complex HEA@HEO nanocomposites with tuned catalytic performance for multifunctional catalysis and energy conversion .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "catalyst",
+          "text": "HEA@HEO nanocomposites"
+        }
+      ],
+      "relations": []
+    }
+  },
+  {
+    "sent_id": "15_5",
+    "orig_doc_key": "38_B__c6ra16606g",
+    "orig_sent_ix": 155,
+    "text": "The microporosity , on one hand , is derived mostly from the evacuation of tarry matter from interstices between aromatic sheets .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "structure",
+          "text": "microporosity"
+        },
+        {
+          "id": "T2",
+          "label": "other_material",
+          "text": "tarry matter"
+        },
+        {
+          "id": "T3",
+          "label": "condition",
+          "text": "aromatic sheets"
+        },
+        {
+          "id": "T4",
+          "label": "value",
+          "text": "evacuation"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T3"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "15_6",
+    "orig_doc_key": "38_B__c6ra16606g",
+    "orig_sent_ix": 161,
+    "text": "A significant graphitization step occurs between 700 and 800 ° C , suggesting enhanced graphitization catalysis by MgO at this temperature .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "condition",
+          "text": "between 700 and 800 ° C"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "enhanced"
+        },
+        {
+          "id": "T3",
+          "label": "property",
+          "text": "graphitization catalysis"
+        },
+        {
+          "id": "T4",
+          "label": "other_material",
+          "text": "MgO"
+        },
+        {
+          "id": "T5",
+          "label": "property",
+          "text": "graphitization step"
+        },
+        {
+          "id": "T6",
+          "label": "value",
+          "text": "significant"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T1"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "16_15",
+    "orig_doc_key": "38_B__c6ra16606g",
+    "orig_sent_ix": 93,
+    "text": "The slight decrease in La between C900 and C1000 ( 16.2 nm ) may reflect shrinking and curving of the graphene layers .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "property",
+          "text": "decrease in La"
+        },
+        {
+          "id": "T2",
+          "label": "support",
+          "text": "C900"
+        },
+        {
+          "id": "T3",
+          "label": "support",
+          "text": "C1000"
+        },
+        {
+          "id": "T4",
+          "label": "value",
+          "text": "16.2 nm"
+        },
+        {
+          "id": "T5",
+          "label": "value",
+          "text": "slight"
+        },
+        {
+          "id": "T6",
+          "label": "structure",
+          "text": "graphene layers"
+        },
+        {
+          "id": "T7",
+          "label": "value",
+          "text": "shrinking"
+        },
+        {
+          "id": "T8",
+          "label": "value",
+          "text": "curving"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T7"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "17_11",
+    "orig_doc_key": "51_B__d2sc04461g",
+    "orig_sent_ix": 45,
+    "text": "We mainly mix these frequently studied ORR active Pt , Pd , Au , and Ag with OER active Ru and Ir .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "structure",
+          "text": "Pt"
+        },
+        {
+          "id": "T2",
+          "label": "structure",
+          "text": "Pd"
+        },
+        {
+          "id": "T3",
+          "label": "structure",
+          "text": "Au"
+        },
+        {
+          "id": "T4",
+          "label": "structure",
+          "text": "Ag"
+        },
+        {
+          "id": "T5",
+          "label": "property",
+          "text": "ORR"
+        },
+        {
+          "id": "T6",
+          "label": "property",
+          "text": "OER"
+        },
+        {
+          "id": "T7",
+          "label": "value",
+          "text": "active"
+        },
+        {
+          "id": "T8",
+          "label": "value",
+          "text": "active"
+        },
+        {
+          "id": "T9",
+          "label": "structure",
+          "text": "Ru"
+        },
+        {
+          "id": "T10",
+          "label": "structure",
+          "text": "Ir"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T9",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T10",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T8"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "17_15",
+    "orig_doc_key": "69_C__d2ya00128d",
+    "orig_sent_ix": 11,
+    "text": "The XRD pattern in Fig. S2 ( ESI ) suggested that the Fe-containing nanoparticles are mixtures of Fe , Fe3O4 and Fe3C .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "catalyst",
+          "text": "Fe-containing nanoparticles"
+        },
+        {
+          "id": "T2",
+          "label": "structure",
+          "text": "Fe"
+        },
+        {
+          "id": "T3",
+          "label": "structure",
+          "text": "Fe3O4"
+        },
+        {
+          "id": "T4",
+          "label": "structure",
+          "text": "Fe3C"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T4"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "17_7",
+    "orig_doc_key": "13_A__d4ey00084f",
+    "orig_sent_ix": 94,
+    "text": "Mn3 + has been predicted to catalyze the first step of the oxygen reduction , the reaction of oxygen to hydrogen peroxide .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "property",
+          "text": "reaction of oxygen to hydrogen peroxide"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "catalyze"
+        },
+        {
+          "id": "T3",
+          "label": "structure",
+          "text": "Mn3 +"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "18_9",
+    "orig_doc_key": "29_B__c9ra02822f",
+    "orig_sent_ix": 83,
+    "text": "The filling of electrons in the anti-bonding orbital weakens the bond strength between Fe – N – C sites and O atoms .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "condition",
+          "text": "filling of electrons in the anti-bonding orbital"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "weakens"
+        },
+        {
+          "id": "T3",
+          "label": "property",
+          "text": "bond strength"
+        },
+        {
+          "id": "T4",
+          "label": "structure",
+          "text": "Fe – N – C sites"
+        },
+        {
+          "id": "T5",
+          "label": "structure",
+          "text": "O atoms"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T1"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "1_7",
+    "orig_doc_key": "38_B__c6ra16606g",
+    "orig_sent_ix": 22,
+    "text": "The magnitude of the rise in carbons C700–C1000 reflects abundant micropores .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "support",
+          "text": "carbons C700–C1000"
+        },
+        {
+          "id": "T2",
+          "label": "structure",
+          "text": "micropores"
+        },
+        {
+          "id": "T3",
+          "label": "value",
+          "text": "abundant"
+        },
+        {
+          "id": "T4",
+          "label": "value",
+          "text": "rise"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T4"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "20_9",
+    "orig_doc_key": "60_C__d2ta00925k",
+    "orig_sent_ix": 71,
+    "text": "The stability of the carbon electrocatalysts towards corrosion was measured for [ Fe(N/C_900 ) ] by repeated cycling experiments in an N2-saturated electrolyte .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "catalyst",
+          "text": "[ Fe(N/C_900 ) ]"
+        }
+      ],
+      "relations": []
+    }
+  },
+  {
+    "sent_id": "21_6",
+    "orig_doc_key": "38_B__c6ra16606g",
+    "orig_sent_ix": 59,
+    "text": "As they grow ( C800 ) , they become large enough to serve as templates in the small mesopore region ( ~5–20 nm ) .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "support",
+          "text": "C800"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "small"
+        },
+        {
+          "id": "T3",
+          "label": "structure",
+          "text": "mesopore"
+        },
+        {
+          "id": "T4",
+          "label": "property",
+          "text": "region"
+        },
+        {
+          "id": "T5",
+          "label": "value",
+          "text": "~5–20 nm"
+        },
+        {
+          "id": "T6",
+          "label": "value",
+          "text": "large"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T5"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "22_11",
+    "orig_doc_key": "60_C__d2ta00925k",
+    "orig_sent_ix": 41,
+    "text": "With increasing pyrolysis temperature , the proportion of edge-located nitrogen atoms ( pyridinic , pyrrolic ) decreases , and that of graphitic nitrogen increases .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "value",
+          "text": "increasing"
+        },
+        {
+          "id": "T2",
+          "label": "process",
+          "text": "pyrolysis"
+        },
+        {
+          "id": "T3",
+          "label": "condition",
+          "text": "temperature"
+        },
+        {
+          "id": "T4",
+          "label": "additive",
+          "text": "nitrogen atoms"
+        },
+        {
+          "id": "T5",
+          "label": "structure",
+          "text": "edge-located"
+        },
+        {
+          "id": "T6",
+          "label": "structure",
+          "text": "pyridinic"
+        },
+        {
+          "id": "T7",
+          "label": "structure",
+          "text": "pyrrolic"
+        },
+        {
+          "id": "T8",
+          "label": "value",
+          "text": "decreases"
+        },
+        {
+          "id": "T9",
+          "label": "structure",
+          "text": "graphitic nitrogen"
+        },
+        {
+          "id": "T10",
+          "label": "value",
+          "text": "increases"
+        },
+        {
+          "id": "T11",
+          "label": "property",
+          "text": "proportion"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T9",
+          "to": "T11"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T11"
+        },
+        {
+          "type": "related_to",
+          "from": "T11",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T11",
+          "to": "T10"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T9",
+          "to": "T10"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T2"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "22_12",
+    "orig_doc_key": "50_B__c7ra05634f",
+    "orig_sent_ix": 18,
+    "text": "Specifically , as shown in Fig. 4c , the peak located at 285.5 eV is ascribed to the carbon in C – N bonds .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "property",
+          "text": "peak"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "285.5 eV"
+        },
+        {
+          "id": "T3",
+          "label": "structure",
+          "text": "C – N bonds"
+        },
+        {
+          "id": "T4",
+          "label": "support",
+          "text": "carbon"
+        },
+        {
+          "id": "T5",
+          "label": "value",
+          "text": "ascribed"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "22_15",
+    "orig_doc_key": "50_B__c7ra05634f",
+    "orig_sent_ix": 44,
+    "text": "Calculated from the LSVs , a linear relationship between J−1 and W−0.5 is recorded among the four electrodes ( inset of Fig. 7 ) .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "property",
+          "text": "linear relationship"
+        },
+        {
+          "id": "T2",
+          "label": "condition",
+          "text": "between J−1 and W−0.5"
+        },
+        {
+          "id": "T3",
+          "label": "value",
+          "text": "recorded"
+        },
+        {
+          "id": "T4",
+          "label": "material_reference",
+          "text": "four electrodes"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T1"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "22_8",
+    "orig_doc_key": "69_C__d2ya00128d",
+    "orig_sent_ix": 76,
+    "text": "Inspired by the impressive ORR performance , practical ZABs were assembled and investigated using Fe/Co – N – C NSs as air cathode catalysts .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "catalyst",
+          "text": "Fe/Co – N – C NSs"
+        },
+        {
+          "id": "T2",
+          "label": "other_material",
+          "text": "ZABs"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "23_12",
+    "orig_doc_key": "38_B__c6ra16606g",
+    "orig_sent_ix": 54,
+    "text": "As the pyrolysis temperature is increased further , this peak broadens and shifts to larger pore sizes , all the way up to 150 nm .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "process",
+          "text": "pyrolysis"
+        },
+        {
+          "id": "T2",
+          "label": "condition",
+          "text": "temperature"
+        },
+        {
+          "id": "T3",
+          "label": "value",
+          "text": "increased"
+        },
+        {
+          "id": "T4",
+          "label": "property",
+          "text": "peak"
+        },
+        {
+          "id": "T5",
+          "label": "value",
+          "text": "broadens"
+        },
+        {
+          "id": "T6",
+          "label": "property",
+          "text": "pore sizes"
+        },
+        {
+          "id": "T7",
+          "label": "value",
+          "text": "larger"
+        },
+        {
+          "id": "T8",
+          "label": "value",
+          "text": "up to 150 nm"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T1"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "23_15",
+    "orig_doc_key": "13_A__d4ey00084f",
+    "orig_sent_ix": 23,
+    "text": "When Co is coupled with Mn in LBSCM , the ORR activity slightly decreases compared to LSM ; however , the onset is the same .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "structure",
+          "text": "Co"
+        },
+        {
+          "id": "T2",
+          "label": "structure",
+          "text": "Mn"
+        },
+        {
+          "id": "T3",
+          "label": "catalyst",
+          "text": "LBSCM"
+        },
+        {
+          "id": "T4",
+          "label": "property",
+          "text": "ORR activity"
+        },
+        {
+          "id": "T5",
+          "label": "value",
+          "text": "slightly decreases"
+        },
+        {
+          "id": "T6",
+          "label": "catalyst",
+          "text": "LSM"
+        },
+        {
+          "id": "T7",
+          "label": "value",
+          "text": "coupled"
+        },
+        {
+          "id": "T8",
+          "label": "property",
+          "text": "onset"
+        },
+        {
+          "id": "T9",
+          "label": "value",
+          "text": "same"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T8",
+          "to": "T9"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "23_8",
+    "orig_doc_key": "09_A__c9ra04677a",
+    "orig_sent_ix": 75,
+    "text": "These studies show that among the samples , TMA@NGMnOx/6 manifest best ORR activity in terms of onset potential , current density and electron transfer number .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "catalyst",
+          "text": "TMA@NGMnOx/6"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "best"
+        },
+        {
+          "id": "T3",
+          "label": "property",
+          "text": "ORR activity"
+        },
+        {
+          "id": "T4",
+          "label": "property",
+          "text": "onset potential"
+        },
+        {
+          "id": "T5",
+          "label": "property",
+          "text": "current density"
+        },
+        {
+          "id": "T6",
+          "label": "property",
+          "text": "electron transfer number"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T2"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "23_9",
+    "orig_doc_key": "09_A__c9ra04677a",
+    "orig_sent_ix": 82,
+    "text": "Moreover , among all the studied samples the most efficient ORR activity in TMA@NGMnOx/6 may be due to the highly uniform distribution of MnOx nanostructures .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "catalyst",
+          "text": "TMA@NGMnOx/6"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "highly uniform"
+        },
+        {
+          "id": "T3",
+          "label": "property",
+          "text": "distribution"
+        },
+        {
+          "id": "T4",
+          "label": "structure",
+          "text": "MnOx nanostructures"
+        },
+        {
+          "id": "T5",
+          "label": "property",
+          "text": "ORR activity"
+        },
+        {
+          "id": "T6",
+          "label": "value",
+          "text": "most efficient"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T2"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "24_13",
+    "orig_doc_key": "50_B__c7ra05634f",
+    "orig_sent_ix": 23,
+    "text": "For the WN FNs/N – C hybrid , the N 1s spectrum ( as shown in Fig. 4f ) could be deconvoluted into three peaks .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "catalyst",
+          "text": "WN FNs/N – C"
+        }
+      ],
+      "relations": []
+    }
+  },
+  {
+    "sent_id": "24_6",
+    "orig_doc_key": "13_A__d4ey00084f",
+    "orig_sent_ix": 72,
+    "text": "However , when Fe ( 20 % ) in BSCF is substituted with Mn to create BSCM , the amount of Co reduction increases 3-fold .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "catalyst",
+          "text": "BSCM"
+        },
+        {
+          "id": "T2",
+          "label": "catalyst",
+          "text": "BSCF"
+        },
+        {
+          "id": "T3",
+          "label": "structure",
+          "text": "Fe ( 20 % )"
+        },
+        {
+          "id": "T4",
+          "label": "value",
+          "text": "substituted"
+        },
+        {
+          "id": "T5",
+          "label": "structure",
+          "text": "Mn"
+        },
+        {
+          "id": "T6",
+          "label": "property",
+          "text": "amount of Co reduction"
+        },
+        {
+          "id": "T7",
+          "label": "value",
+          "text": "increases"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T7"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "24_7",
+    "orig_doc_key": "13_A__d4ey00084f",
+    "orig_sent_ix": 81,
+    "text": "Thereby , it becomes apparent that there is an underlying irreversible oxidation occurring with each cycle , which is particularly strong for Co containing materials .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "property",
+          "text": "underlying irreversible oxidation"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "occurring"
+        },
+        {
+          "id": "T3",
+          "label": "condition",
+          "text": "each cycle"
+        },
+        {
+          "id": "T4",
+          "label": "structure",
+          "text": "Co containing"
+        },
+        {
+          "id": "T5",
+          "label": "material_reference",
+          "text": "materials"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T3"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "25_14",
+    "orig_doc_key": "13_A__d4ey00084f",
+    "orig_sent_ix": 130,
+    "text": "Even though LSM is more conductive than BSCF by several orders of magnitude , the addition of carbon creates equal conductivity in all the catalyst layers .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "catalyst",
+          "text": "LSM"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "more conductive"
+        },
+        {
+          "id": "T3",
+          "label": "catalyst",
+          "text": "BSCF"
+        },
+        {
+          "id": "T4",
+          "label": "catalyst",
+          "text": "all the catalyst"
+        },
+        {
+          "id": "T5",
+          "label": "property",
+          "text": "conductivity"
+        },
+        {
+          "id": "T6",
+          "label": "value",
+          "text": "equal"
+        },
+        {
+          "id": "T7",
+          "label": "additive",
+          "text": "carbon"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "26_0",
+    "orig_doc_key": "51_B__d2sc04461g",
+    "orig_sent_ix": 29,
+    "text": "Noble metals ( Pt , Pd , Au , Ag , etc . ) will retain their metallic state , thus forming the HEA@HEO metal/oxide composite .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "structure",
+          "text": "Noble metals"
+        },
+        {
+          "id": "T2",
+          "label": "structure",
+          "text": "Pt"
+        },
+        {
+          "id": "T3",
+          "label": "structure",
+          "text": "Pd"
+        },
+        {
+          "id": "T4",
+          "label": "structure",
+          "text": "Au"
+        },
+        {
+          "id": "T5",
+          "label": "structure",
+          "text": "Ag"
+        },
+        {
+          "id": "T6",
+          "label": "catalyst",
+          "text": "HEA@HEO metal/oxide composite"
+        },
+        {
+          "id": "T7",
+          "label": "property",
+          "text": "metallic state"
+        },
+        {
+          "id": "T8",
+          "label": "value",
+          "text": "retain"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T8"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "27_10",
+    "orig_doc_key": "60_C__d2ta00925k",
+    "orig_sent_ix": 84,
+    "text": "We report a simple and scalable ( decagram scale ) synthesis of an atomically dispersed , hierarchically porous Fe – N – C electrocatalyst for acidic ORR .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "value",
+          "text": "atomically"
+        },
+        {
+          "id": "T2",
+          "label": "property",
+          "text": "dispersed"
+        },
+        {
+          "id": "T3",
+          "label": "structure",
+          "text": "hierarchically porous"
+        },
+        {
+          "id": "T4",
+          "label": "catalyst",
+          "text": "Fe – N – C"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T1"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "27_11",
+    "orig_doc_key": "60_C__d2ta00925k",
+    "orig_sent_ix": 87,
+    "text": "Rotating disk half-cell tests revealed halfwave potentials of 0.7 V vs. RHE in 0.1 M HClO4 , high mass activity , and high stability against carbon corrosion .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "property",
+          "text": "halfwave potentials"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "0.7 V vs. RHE"
+        },
+        {
+          "id": "T3",
+          "label": "value",
+          "text": "0.1 M"
+        },
+        {
+          "id": "T4",
+          "label": "electrolyte",
+          "text": "HClO4"
+        },
+        {
+          "id": "T5",
+          "label": "value",
+          "text": "high"
+        },
+        {
+          "id": "T6",
+          "label": "property",
+          "text": "mass activity"
+        },
+        {
+          "id": "T7",
+          "label": "value",
+          "text": "high"
+        },
+        {
+          "id": "T8",
+          "label": "property",
+          "text": "stability"
+        },
+        {
+          "id": "T9",
+          "label": "condition",
+          "text": "carbon corrosion"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T8",
+          "to": "T9"
+        },
+        {
+          "type": "related_to",
+          "from": "T8",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T1"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "27_15",
+    "orig_doc_key": "50_B__c7ra05634f",
+    "orig_sent_ix": 33,
+    "text": "By fitting the equivalent circuit inset , the Rct values were 64.8 and 29.8 Ω for WN NPs/N – C and WN FNs/N – C , respectively .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "property",
+          "text": "Rct values"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "64.8"
+        },
+        {
+          "id": "T3",
+          "label": "value",
+          "text": "29.8 Ω"
+        },
+        {
+          "id": "T4",
+          "label": "catalyst",
+          "text": "WN NPs/N – C"
+        },
+        {
+          "id": "T5",
+          "label": "catalyst",
+          "text": "WN FNs/N – C"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T3"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "27_9",
+    "orig_doc_key": "60_C__d2ta00925k",
+    "orig_sent_ix": 3,
+    "text": "We now report such a simple synthesis of over 10 g of an Fe – N – C catalyst with high activity towards oxygen reduction in acid .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "catalyst",
+          "text": "Fe – N – C"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "high"
+        },
+        {
+          "id": "T3",
+          "label": "property",
+          "text": "activity"
+        },
+        {
+          "id": "T4",
+          "label": "condition",
+          "text": "oxygen reduction"
+        },
+        {
+          "id": "T5",
+          "label": "condition",
+          "text": "acid"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T5"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "28_0",
+    "orig_doc_key": "50_B__c7ra05634f",
+    "orig_sent_ix": 42,
+    "text": "Therefore , WN FNs/N – C exhibits superior ORR activity to those of others because of its faster reaction kinetics and fast reactant diffusion and electron transfer .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "catalyst",
+          "text": "WN FNs/N – C"
+        },
+        {
+          "id": "T2",
+          "label": "property",
+          "text": "ORR activity"
+        },
+        {
+          "id": "T3",
+          "label": "value",
+          "text": "superior"
+        },
+        {
+          "id": "T4",
+          "label": "value",
+          "text": "faster"
+        },
+        {
+          "id": "T5",
+          "label": "property",
+          "text": "reaction kinetics"
+        },
+        {
+          "id": "T6",
+          "label": "value",
+          "text": "fast"
+        },
+        {
+          "id": "T7",
+          "label": "property",
+          "text": "reactant diffusion"
+        },
+        {
+          "id": "T8",
+          "label": "property",
+          "text": "electron transfer"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T8",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T8"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "28_15",
+    "orig_doc_key": "38_B__c6ra16606g",
+    "orig_sent_ix": 158,
+    "text": "Discrete MgO particles give rise to small mesoporosity ( > 800 ° C ) , whereas MgO agglomerates act as macropore templates ( > 900 ° C ) .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "other_material",
+          "text": "MgO particles"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "Discrete"
+        },
+        {
+          "id": "T3",
+          "label": "property",
+          "text": "mesoporosity"
+        },
+        {
+          "id": "T4",
+          "label": "condition",
+          "text": "> 800 ° C"
+        },
+        {
+          "id": "T5",
+          "label": "value",
+          "text": "small"
+        },
+        {
+          "id": "T6",
+          "label": "other_material",
+          "text": "MgO"
+        },
+        {
+          "id": "T7",
+          "label": "structure",
+          "text": "agglomerates"
+        },
+        {
+          "id": "T8",
+          "label": "property",
+          "text": "macropore templates"
+        },
+        {
+          "id": "T9",
+          "label": "condition",
+          "text": "> 900 ° C"
+        },
+        {
+          "id": "T10",
+          "label": "value",
+          "text": "act"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T8",
+          "to": "T10"
+        },
+        {
+          "type": "related_to",
+          "from": "T8",
+          "to": "T9"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "28_6",
+    "orig_doc_key": "09_A__c9ra04677a",
+    "orig_sent_ix": 85,
+    "text": "Similarly , for growth in presence of BA , highest ORR activity is observed in BA@NGMnOx/8 and decrease in activity is evident in BA@NGMnOx/12 ( Figure S12 ) .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "additive",
+          "text": "BA"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "highest"
+        },
+        {
+          "id": "T3",
+          "label": "property",
+          "text": "ORR activity"
+        },
+        {
+          "id": "T4",
+          "label": "catalyst",
+          "text": "BA@NGMnOx/8"
+        },
+        {
+          "id": "T5",
+          "label": "value",
+          "text": "decrease"
+        },
+        {
+          "id": "T6",
+          "label": "property",
+          "text": "activity"
+        },
+        {
+          "id": "T7",
+          "label": "catalyst",
+          "text": "BA@NGMnOx/12"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T1"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "29_3",
+    "orig_doc_key": "51_B__d2sc04461g",
+    "orig_sent_ix": 21,
+    "text": "Additionally , the STEM image ( Fig. 1e ) confirms the uniform distribution of distinguishable nanoclusters on the HEO nanowires ( some are marked by black arrows ) .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "support",
+          "text": "HEO nanowires"
+        },
+        {
+          "id": "T2",
+          "label": "structure",
+          "text": "nanoclusters"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "30_11",
+    "orig_doc_key": "38_B__c6ra16606g",
+    "orig_sent_ix": 65,
+    "text": "These peaks are assigned to the ( 111 ) , ( 200 ) and ( 220 ) planes of MgO , respectively ( JCPDS card 45 - 0946 ) .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "structure",
+          "text": "( 111 )"
+        },
+        {
+          "id": "T2",
+          "label": "structure",
+          "text": "( 200 )"
+        },
+        {
+          "id": "T3",
+          "label": "structure",
+          "text": "( 220 ) planes"
+        },
+        {
+          "id": "T4",
+          "label": "other_material",
+          "text": "MgO"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T1"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "30_7",
+    "orig_doc_key": "09_A__c9ra04677a",
+    "orig_sent_ix": 87,
+    "text": "In summary , we demonstrated evolution of various MnOx phases and nanostructures on NG as the reactions proceed in presence of TMA or BA and studied their ORR activity .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "structure",
+          "text": "MnOx phases"
+        },
+        {
+          "id": "T2",
+          "label": "structure",
+          "text": "nanostructures"
+        },
+        {
+          "id": "T3",
+          "label": "support",
+          "text": "NG"
+        },
+        {
+          "id": "T4",
+          "label": "additive",
+          "text": "TMA"
+        },
+        {
+          "id": "T5",
+          "label": "additive",
+          "text": "BA"
+        },
+        {
+          "id": "T6",
+          "label": "value",
+          "text": "evolution"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T1"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "33_0",
+    "orig_doc_key": "09_A__c9ra04677a",
+    "orig_sent_ix": 55,
+    "text": "However , in O2 saturated electrolyte ( solid curves ) , an additional reduction peak appears due to oxygen reduction , for each of the catalyst sample during the cathodic sweep .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "condition",
+          "text": "O2 saturated"
+        },
+        {
+          "id": "T2",
+          "label": "property",
+          "text": "reduction peak"
+        },
+        {
+          "id": "T3",
+          "label": "value",
+          "text": "additional"
+        },
+        {
+          "id": "T4",
+          "label": "value",
+          "text": "appears"
+        },
+        {
+          "id": "T5",
+          "label": "condition",
+          "text": "oxygen reduction"
+        },
+        {
+          "id": "T6",
+          "label": "material_reference",
+          "text": "catalyst sample"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T1"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "33_1",
+    "orig_doc_key": "09_A__c9ra04677a",
+    "orig_sent_ix": 84,
+    "text": "However , CV and RDE studies show that the ORR activity of samples prepared in lower concentration of TMA follow the trend 0.5TMA@NGMnOx/12 > 0.5TMA@NGMnOx/8 > 0.5TMA@NGMnOx/4 ( Figure S11 ) .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "catalyst",
+          "text": "0.5TMA@NGMnOx/12"
+        },
+        {
+          "id": "T2",
+          "label": "catalyst",
+          "text": "0.5TMA@NGMnOx/8"
+        },
+        {
+          "id": "T3",
+          "label": "catalyst",
+          "text": "0.5TMA@NGMnOx/4"
+        }
+      ],
+      "relations": []
+    }
+  },
+  {
+    "sent_id": "33_11",
+    "orig_doc_key": "13_A__d4ey00084f",
+    "orig_sent_ix": 117,
+    "text": "As expected , the addition of carbon to the catalyst layer is detrimental to the electrolysis performance , as seen by the higher cell potential of BSCF/LSM/carbon at high current densities .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "additive",
+          "text": "carbon"
+        },
+        {
+          "id": "T2",
+          "label": "catalyst",
+          "text": "catalyst"
+        },
+        {
+          "id": "T3",
+          "label": "value",
+          "text": "detrimental"
+        },
+        {
+          "id": "T4",
+          "label": "property",
+          "text": "electrolysis performance"
+        },
+        {
+          "id": "T5",
+          "label": "catalyst",
+          "text": "BSCF/LSM/carbon"
+        },
+        {
+          "id": "T6",
+          "label": "property",
+          "text": "cell potential"
+        },
+        {
+          "id": "T7",
+          "label": "value",
+          "text": "higher"
+        },
+        {
+          "id": "T8",
+          "label": "value",
+          "text": "high"
+        },
+        {
+          "id": "T9",
+          "label": "condition",
+          "text": "current densities"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T9"
+        },
+        {
+          "type": "related_to",
+          "from": "T9",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T3"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "35_0",
+    "orig_doc_key": "13_A__d4ey00084f",
+    "orig_sent_ix": 14,
+    "text": "X-ray diffraction ( XRD ) measurements show the flame spray synthesized materials crystalize into cubic perovskite structures with some secondary phases identified as carbonates and nitrates ( Figure S1 , ESI ) .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "material_reference",
+          "text": "materials"
+        },
+        {
+          "id": "T2",
+          "label": "process",
+          "text": "flame spray synthesized"
+        },
+        {
+          "id": "T3",
+          "label": "structure",
+          "text": "cubic perovskite structures"
+        },
+        {
+          "id": "T4",
+          "label": "structure",
+          "text": "carbonates"
+        },
+        {
+          "id": "T5",
+          "label": "structure",
+          "text": "nitrates"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T5"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "35_12",
+    "orig_doc_key": "29_B__c9ra02822f",
+    "orig_sent_ix": 16,
+    "text": "In comparison with Fe–2N–2C-hex defect , the lower doping density for Fe–2N–2C-oppo defect and the much stronger repulsive interaction for Fe–2N–2C-pen defect are the main drawbacks accounting for the inferior defect Ef .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "structure",
+          "text": "Fe–2N–2C-hex defect"
+        },
+        {
+          "id": "T2",
+          "label": "property",
+          "text": "doping density"
+        },
+        {
+          "id": "T3",
+          "label": "structure",
+          "text": "Fe–2N–2C-oppo defect"
+        },
+        {
+          "id": "T4",
+          "label": "value",
+          "text": "lower"
+        },
+        {
+          "id": "T5",
+          "label": "property",
+          "text": "repulsive interaction"
+        },
+        {
+          "id": "T6",
+          "label": "structure",
+          "text": "Fe–2N–2C-pen defect"
+        },
+        {
+          "id": "T7",
+          "label": "value",
+          "text": "inferior"
+        },
+        {
+          "id": "T8",
+          "label": "property",
+          "text": "defect Ef"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T8",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T8"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "35_6",
+    "orig_doc_key": "69_C__d2ya00128d",
+    "orig_sent_ix": 84,
+    "text": "In summary , a unique chemical blowing strategy together with a pickling step and subsequent atomic trapping was proposed to prepare dual-metallic Fe/Co – N – C NSs with abundant hierarchical pores .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "process",
+          "text": "chemical blowing"
+        },
+        {
+          "id": "T2",
+          "label": "process",
+          "text": "atomic trapping"
+        },
+        {
+          "id": "T3",
+          "label": "process",
+          "text": "pickling"
+        },
+        {
+          "id": "T4",
+          "label": "catalyst",
+          "text": "dual-metallic Fe/Co – N – C NSs"
+        },
+        {
+          "id": "T5",
+          "label": "value",
+          "text": "abundant"
+        },
+        {
+          "id": "T6",
+          "label": "structure",
+          "text": "hierarchical pores"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T1"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "36_13",
+    "orig_doc_key": "69_C__d2ya00128d",
+    "orig_sent_ix": 75,
+    "text": "Therefore , these unique composition and structure merits endow Fe/Co – N – C NSs with outstanding ORR performance , surpassing that of mono-metallic Fe – N – C and benchmark Pt/C catalysts .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "catalyst",
+          "text": "Fe/Co – N – C NSs"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "outstanding"
+        },
+        {
+          "id": "T3",
+          "label": "property",
+          "text": "ORR performance"
+        },
+        {
+          "id": "T4",
+          "label": "catalyst",
+          "text": "mono-metallic Fe – N – C"
+        },
+        {
+          "id": "T5",
+          "label": "catalyst",
+          "text": "Pt/C"
+        },
+        {
+          "id": "T6",
+          "label": "value",
+          "text": "surpassing"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T6"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "37_15",
+    "orig_doc_key": "51_B__d2sc04461g",
+    "orig_sent_ix": 41,
+    "text": "We measured more than 60 clusters and found that their size is mainly less than 2 nm and more than 70 % of these clusters are 1.5–2.2 nm ( Fig. 2b and c ) .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "material_reference",
+          "text": "clusters"
+        },
+        {
+          "id": "T2",
+          "label": "property",
+          "text": "size"
+        },
+        {
+          "id": "T3",
+          "label": "value",
+          "text": "less than 2 nm"
+        },
+        {
+          "id": "T4",
+          "label": "value",
+          "text": "1.5–2.2 nm"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T4"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "37_2",
+    "orig_doc_key": "29_B__c9ra02822f",
+    "orig_sent_ix": 63,
+    "text": "Figure 6 shows the trend of PDOSs of adsorbed O atoms on the Fe – N – C-gra catalysts as the number of N atoms increases from 0 to 3 in single vacancy .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "structure",
+          "text": "single vacancy"
+        },
+        {
+          "id": "T2",
+          "label": "catalyst",
+          "text": "Fe – N – C-gra"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T1"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "37_5",
+    "orig_doc_key": "29_B__c9ra02822f",
+    "orig_sent_ix": 78,
+    "text": "There are strong hybridizations between O-2p and Fe-3d states from −6 eV to Fermi level , indicating a strong interaction of adsorbed O atoms with the surface ( Figure 7a – e ) .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "value",
+          "text": "strong hybridizations"
+        },
+        {
+          "id": "T2",
+          "label": "structure",
+          "text": "O-2p"
+        },
+        {
+          "id": "T3",
+          "label": "structure",
+          "text": "Fe-3d states"
+        },
+        {
+          "id": "T4",
+          "label": "condition",
+          "text": "−6 eV to Fermi level"
+        },
+        {
+          "id": "T5",
+          "label": "value",
+          "text": "strong"
+        },
+        {
+          "id": "T6",
+          "label": "property",
+          "text": "interaction"
+        },
+        {
+          "id": "T7",
+          "label": "structure",
+          "text": "O atoms"
+        },
+        {
+          "id": "T8",
+          "label": "structure",
+          "text": "surface"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T8",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T4"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "37_8",
+    "orig_doc_key": "38_B__c6ra16606g",
+    "orig_sent_ix": 153,
+    "text": "The evolution of hierarchical porosity , as well as other microstructural and compositional properties of MgNTA-derived carbons , have been studied in the 600–1000 ° C temperature range by a variety of experimental methods .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "support",
+          "text": "carbons"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "600–1000 ° C"
+        },
+        {
+          "id": "T3",
+          "label": "condition",
+          "text": "temperature"
+        },
+        {
+          "id": "T4",
+          "label": "process",
+          "text": "porosity"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T2"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "38_11",
+    "orig_doc_key": "09_A__c9ra04677a",
+    "orig_sent_ix": 2,
+    "text": "During the growth in the presence of TMA , agglomerated nanostructures were formed at 2 h reaction , which transformed to well dispersed 4–7 nm particles at 6 h over a large area of NG .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "additive",
+          "text": "TMA"
+        },
+        {
+          "id": "T2",
+          "label": "structure",
+          "text": "agglomerated nanostructures"
+        },
+        {
+          "id": "T3",
+          "label": "condition",
+          "text": "reaction"
+        },
+        {
+          "id": "T4",
+          "label": "value",
+          "text": "formed"
+        },
+        {
+          "id": "T5",
+          "label": "value",
+          "text": "well"
+        },
+        {
+          "id": "T6",
+          "label": "value",
+          "text": "4–7 nm"
+        },
+        {
+          "id": "T7",
+          "label": "support",
+          "text": "NG"
+        },
+        {
+          "id": "T8",
+          "label": "property",
+          "text": "area"
+        },
+        {
+          "id": "T9",
+          "label": "value",
+          "text": "large"
+        },
+        {
+          "id": "T10",
+          "label": "condition",
+          "text": "6 h"
+        },
+        {
+          "id": "T11",
+          "label": "structure",
+          "text": "particles"
+        },
+        {
+          "id": "T12",
+          "label": "property",
+          "text": "dispersed"
+        },
+        {
+          "id": "T13",
+          "label": "value",
+          "text": "2 h"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T8",
+          "to": "T9"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T11"
+        },
+        {
+          "type": "related_to",
+          "from": "T11",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T11",
+          "to": "T12"
+        },
+        {
+          "type": "related_to",
+          "from": "T12",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T13"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T11",
+          "to": "T10"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "38_12",
+    "orig_doc_key": "09_A__c9ra04677a",
+    "orig_sent_ix": 30,
+    "text": "It corroborates the fact that TMA not only functionalize the surface of graphene but also above a certain concentration in reaction medium helps MnOx dissolution , which is necessary for getting uniform distribution of nanoparticles .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "support",
+          "text": "graphene"
+        },
+        {
+          "id": "T2",
+          "label": "additive",
+          "text": "TMA"
+        },
+        {
+          "id": "T3",
+          "label": "value",
+          "text": "functionalize"
+        },
+        {
+          "id": "T4",
+          "label": "structure",
+          "text": "surface"
+        },
+        {
+          "id": "T5",
+          "label": "value",
+          "text": "above a certain"
+        },
+        {
+          "id": "T6",
+          "label": "condition",
+          "text": "concentration"
+        },
+        {
+          "id": "T7",
+          "label": "structure",
+          "text": "MnOx"
+        },
+        {
+          "id": "T8",
+          "label": "property",
+          "text": "dissolution"
+        },
+        {
+          "id": "T9",
+          "label": "value",
+          "text": "helps"
+        },
+        {
+          "id": "T10",
+          "label": "value",
+          "text": "uniform"
+        },
+        {
+          "id": "T11",
+          "label": "property",
+          "text": "distribution"
+        },
+        {
+          "id": "T12",
+          "label": "structure",
+          "text": "nanoparticles"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T8",
+          "to": "T9"
+        },
+        {
+          "type": "related_to",
+          "from": "T9",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T12"
+        },
+        {
+          "type": "related_to",
+          "from": "T12",
+          "to": "T11"
+        },
+        {
+          "type": "related_to",
+          "from": "T11",
+          "to": "T10"
+        },
+        {
+          "type": "related_to",
+          "from": "T10",
+          "to": "T6"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "38_8",
+    "orig_doc_key": "29_B__c9ra02822f",
+    "orig_sent_ix": 20,
+    "text": "These results indicate that , when the doping number of N atoms is more than one ( except Fe–2N–2C-oppo defect ) , the double vacancy structures have outstanding doping efficiency than the single vacancy .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "structure",
+          "text": "Fe–2N–2C-oppo defect"
+        },
+        {
+          "id": "T2",
+          "label": "structure",
+          "text": "double vacancy structures"
+        },
+        {
+          "id": "T3",
+          "label": "value",
+          "text": "outstanding"
+        },
+        {
+          "id": "T4",
+          "label": "property",
+          "text": "doping efficiency"
+        },
+        {
+          "id": "T5",
+          "label": "structure",
+          "text": "single vacancy"
+        },
+        {
+          "id": "T6",
+          "label": "condition",
+          "text": "doping number of N atoms"
+        },
+        {
+          "id": "T7",
+          "label": "value",
+          "text": "more than one"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T7"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "39_15",
+    "orig_doc_key": "09_A__c9ra04677a",
+    "orig_sent_ix": 63,
+    "text": "The RDE polarographs for TMA@NGMnOx/6 ( Figure 7b ) at electrode rotation rates of 400 , 600 , 900 , 1200 , 1600 and 2000 rpm show that the ORR current increases with increasing rotation rate .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "catalyst",
+          "text": "TMA@NGMnOx/6"
+        },
+        {
+          "id": "T2",
+          "label": "property",
+          "text": "ORR current"
+        },
+        {
+          "id": "T3",
+          "label": "value",
+          "text": "increases"
+        },
+        {
+          "id": "T4",
+          "label": "value",
+          "text": "increasing"
+        },
+        {
+          "id": "T5",
+          "label": "condition",
+          "text": "rotation rate"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T4"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "3_13",
+    "orig_doc_key": "09_A__c9ra04677a",
+    "orig_sent_ix": 23,
+    "text": "Therefore , drastically reduced concentration of MnOx nanostructures is observed in TMA@NGMnOx/8 and TMA@NGMnOx/12 .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "value",
+          "text": "drastically reduced"
+        },
+        {
+          "id": "T2",
+          "label": "property",
+          "text": "concentration"
+        },
+        {
+          "id": "T3",
+          "label": "structure",
+          "text": "MnOx nanostructures"
+        },
+        {
+          "id": "T4",
+          "label": "catalyst",
+          "text": "TMA@NGMnOx/8"
+        },
+        {
+          "id": "T5",
+          "label": "catalyst",
+          "text": "TMA@NGMnOx/12"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T1"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "3_5",
+    "orig_doc_key": "38_B__c6ra16606g",
+    "orig_sent_ix": 90,
+    "text": "Thus , the carbons become more ordered when heated above 600 ° C .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "support",
+          "text": "carbons"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "ordered"
+        },
+        {
+          "id": "T3",
+          "label": "process",
+          "text": "heated"
+        },
+        {
+          "id": "T4",
+          "label": "condition",
+          "text": "above 600 ° C"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T3"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "3_7",
+    "orig_doc_key": "13_A__d4ey00084f",
+    "orig_sent_ix": 25,
+    "text": "The physical mixture BSCF/LSM presents an intermediate ORR activity between LSM and BSCF .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "catalyst",
+          "text": "BSCF/LSM"
+        },
+        {
+          "id": "T2",
+          "label": "property",
+          "text": "ORR activity"
+        },
+        {
+          "id": "T3",
+          "label": "value",
+          "text": "intermediate"
+        },
+        {
+          "id": "T4",
+          "label": "catalyst",
+          "text": "LSM"
+        },
+        {
+          "id": "T5",
+          "label": "catalyst",
+          "text": "BSCF"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T3"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "40_3",
+    "orig_doc_key": "51_B__d2sc04461g",
+    "orig_sent_ix": 65,
+    "text": "Interestingly , we found that the HEA cluster@HEO shows further enhanced ORR activity , with a highest E1/2 of ~0.89 V , which is even better than that of Pt/C ( E1/2 : 0.86 V ) .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "catalyst",
+          "text": "HEA cluster@HEO"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "enhanced"
+        },
+        {
+          "id": "T3",
+          "label": "property",
+          "text": "ORR activity"
+        },
+        {
+          "id": "T4",
+          "label": "value",
+          "text": "highest"
+        },
+        {
+          "id": "T5",
+          "label": "property",
+          "text": "E1/2"
+        },
+        {
+          "id": "T6",
+          "label": "value",
+          "text": "~0.89 V"
+        },
+        {
+          "id": "T7",
+          "label": "value",
+          "text": "better"
+        },
+        {
+          "id": "T8",
+          "label": "catalyst",
+          "text": "Pt/C"
+        },
+        {
+          "id": "T9",
+          "label": "property",
+          "text": "E1/2"
+        },
+        {
+          "id": "T10",
+          "label": "value",
+          "text": "0.86 V"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T8",
+          "to": "T9"
+        },
+        {
+          "type": "related_to",
+          "from": "T9",
+          "to": "T10"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "40_5",
+    "orig_doc_key": "69_C__d2ya00128d",
+    "orig_sent_ix": 16,
+    "text": "As shown in Fig. 2a , the Fe/Co – N – C NSs were very fluffy and exhibited a distinct porous lamellar structure due to the chemical blowing of PVP with the assistance of iron nitrate .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "catalyst",
+          "text": "Fe/Co – N – C NSs"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "very fluffy"
+        },
+        {
+          "id": "T3",
+          "label": "structure",
+          "text": "porous lamellar structure"
+        },
+        {
+          "id": "T4",
+          "label": "value",
+          "text": "distinct"
+        },
+        {
+          "id": "T5",
+          "label": "precursors",
+          "text": "PVP"
+        },
+        {
+          "id": "T6",
+          "label": "precursors",
+          "text": "iron nitrate"
+        },
+        {
+          "id": "T7",
+          "label": "value",
+          "text": "chemical blowing"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T3"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "41_13",
+    "orig_doc_key": "60_C__d2ta00925k",
+    "orig_sent_ix": 47,
+    "text": "Finally , the robustness of the carbon composition along the pyrolysis was investigated by heating Mg/NC_800 in argon from room temperature to 950 ° C in a thermogravimetric setup coupled to mass spectrometry ( Figure S3 ) .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "catalyst",
+          "text": "Mg/NC_800"
+        }
+      ],
+      "relations": []
+    }
+  },
+  {
+    "sent_id": "42_1",
+    "orig_doc_key": "50_B__c7ra05634f",
+    "orig_sent_ix": 45,
+    "text": "The n value was calculated to be 3.4 ( N – C ) , 3.5 ( WN NPs/N – C ) , 3.9 ( WN FNs/N – C ) , and 4.0 ( Pt/C ) , respectively .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "property",
+          "text": "n value"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "3.4"
+        },
+        {
+          "id": "T3",
+          "label": "support",
+          "text": "N – C"
+        },
+        {
+          "id": "T4",
+          "label": "value",
+          "text": "3.5"
+        },
+        {
+          "id": "T5",
+          "label": "catalyst",
+          "text": "WN NPs/N – C"
+        },
+        {
+          "id": "T6",
+          "label": "value",
+          "text": "3.9"
+        },
+        {
+          "id": "T7",
+          "label": "catalyst",
+          "text": "WN FNs/N – C"
+        },
+        {
+          "id": "T8",
+          "label": "value",
+          "text": "4.0"
+        },
+        {
+          "id": "T9",
+          "label": "catalyst",
+          "text": "Pt/C"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T9",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T9",
+          "to": "T8"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "42_12",
+    "orig_doc_key": "51_B__d2sc04461g",
+    "orig_sent_ix": 118,
+    "text": "The value of n is calculated to be ≈3.94 from the slopes of Koutecky – Levich plots and demonstrates a near four-electron oxygen reduction process for N-MG-800 , analogous to the Pt/C catalyst with n ≈ 4.0 . \n",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "property",
+          "text": "value of n"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "≈3.94"
+        },
+        {
+          "id": "T3",
+          "label": "condition",
+          "text": "near four-electron oxygen reduction process"
+        },
+        {
+          "id": "T4",
+          "label": "catalyst",
+          "text": "N-MG-800"
+        },
+        {
+          "id": "T5",
+          "label": "catalyst",
+          "text": "Pt/C"
+        },
+        {
+          "id": "T6",
+          "label": "property",
+          "text": "n"
+        },
+        {
+          "id": "T7",
+          "label": "value",
+          "text": "4.0"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T7"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "42_14",
+    "orig_doc_key": "69_C__d2ya00128d",
+    "orig_sent_ix": 73,
+    "text": "By comparing their ORR performance , we found that all the dual-metallic catalysts exhibited superior activity over commercial Pt/C , and the Fe/Co – N – C catalyst delivered the best ORR activity compared to other dual-metallic catalysts .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "material_reference",
+          "text": "all the dual-metallic catalysts"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "superior"
+        },
+        {
+          "id": "T3",
+          "label": "property",
+          "text": "activity"
+        },
+        {
+          "id": "T4",
+          "label": "catalyst",
+          "text": "Pt/C"
+        },
+        {
+          "id": "T5",
+          "label": "catalyst",
+          "text": "Fe/Co – N – C"
+        },
+        {
+          "id": "T6",
+          "label": "value",
+          "text": "best"
+        },
+        {
+          "id": "T7",
+          "label": "property",
+          "text": "ORR activity"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T6"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "44_13",
+    "orig_doc_key": "69_C__d2ya00128d",
+    "orig_sent_ix": 4,
+    "text": "When Fe/Co – N – C NSs were employed as air cathode catalysts for primary Zn – air batteries , the assembled cells delivered an open-circuit voltage up to 1.52 V and a peak power density of 165 mW cm−2 .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "catalyst",
+          "text": "Fe/Co – N – C NSs"
+        },
+        {
+          "id": "T2",
+          "label": "other_material",
+          "text": "primary Zn – air batteries"
+        },
+        {
+          "id": "T3",
+          "label": "property",
+          "text": "open-circuit voltage"
+        },
+        {
+          "id": "T4",
+          "label": "value",
+          "text": "up to 1.52 V"
+        },
+        {
+          "id": "T5",
+          "label": "property",
+          "text": "peak power density"
+        },
+        {
+          "id": "T6",
+          "label": "value",
+          "text": "165 mW cm−2"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T5"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "44_7",
+    "orig_doc_key": "29_B__c9ra02822f",
+    "orig_sent_ix": 54,
+    "text": "A conclusion could be made that moderate N-doping levels and doping configuration could enhance the ORR activity of Fe – N coordination structures in double vacancy and doping N atoms is not effective for ORR activity in single vacancy .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "value",
+          "text": "moderate"
+        },
+        {
+          "id": "T2",
+          "label": "condition",
+          "text": "N-doping levels"
+        },
+        {
+          "id": "T3",
+          "label": "condition",
+          "text": "doping configuration"
+        },
+        {
+          "id": "T4",
+          "label": "value",
+          "text": "enhance"
+        },
+        {
+          "id": "T5",
+          "label": "property",
+          "text": "ORR activity"
+        },
+        {
+          "id": "T6",
+          "label": "structure",
+          "text": "Fe – N coordination structures in double vacancy"
+        },
+        {
+          "id": "T7",
+          "label": "additive",
+          "text": "N atoms"
+        },
+        {
+          "id": "T8",
+          "label": "property",
+          "text": "ORR activity"
+        },
+        {
+          "id": "T9",
+          "label": "structure",
+          "text": "single vacancy"
+        },
+        {
+          "id": "T10",
+          "label": "value",
+          "text": "not effective"
+        },
+        {
+          "id": "T11",
+          "label": "process",
+          "text": "doping"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T8",
+          "to": "T10"
+        },
+        {
+          "type": "related_to",
+          "from": "T9",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T11"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T2"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "45_4",
+    "orig_doc_key": "13_A__d4ey00084f",
+    "orig_sent_ix": 109,
+    "text": "In particular , as the potential is increased from 0.05 to 0.8 V , most samples do not start to oxidize until much later , indicating slow rates of Co and Mn oxidation on the anodic sweep in the ORR region .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "condition",
+          "text": "potential"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "increased from 0.05 to 0.8 V"
+        },
+        {
+          "id": "T3",
+          "label": "material_reference",
+          "text": "most samples"
+        },
+        {
+          "id": "T4",
+          "label": "property",
+          "text": "start to oxidize"
+        },
+        {
+          "id": "T5",
+          "label": "value",
+          "text": "much later"
+        },
+        {
+          "id": "T6",
+          "label": "structure",
+          "text": "Co"
+        },
+        {
+          "id": "T7",
+          "label": "structure",
+          "text": "Mn"
+        },
+        {
+          "id": "T8",
+          "label": "property",
+          "text": "oxidation"
+        },
+        {
+          "id": "T9",
+          "label": "condition",
+          "text": "anodic sweep"
+        },
+        {
+          "id": "T10",
+          "label": "condition",
+          "text": "ORR region"
+        },
+        {
+          "id": "T11",
+          "label": "value",
+          "text": "slow rates"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T8",
+          "to": "T11"
+        },
+        {
+          "type": "related_to",
+          "from": "T8",
+          "to": "T9"
+        },
+        {
+          "type": "related_to",
+          "from": "T8",
+          "to": "T10"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "45_6",
+    "orig_doc_key": "51_B__d2sc04461g",
+    "orig_sent_ix": 53,
+    "text": "The seven-component sample with the best OER activity was then adopted in this work . The seven-component HEO shows even better OER catalytic performance than commercial IrO2 ( Fig. 3a ) , by exhibiting a smaller overpotential at 10 mA cm−2 .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "structure",
+          "text": "seven-component"
+        },
+        {
+          "id": "T2",
+          "label": "material_reference",
+          "text": "sample"
+        },
+        {
+          "id": "T3",
+          "label": "value",
+          "text": "best"
+        },
+        {
+          "id": "T4",
+          "label": "property",
+          "text": "OER activity"
+        },
+        {
+          "id": "T5",
+          "label": "structure",
+          "text": "seven-component"
+        },
+        {
+          "id": "T6",
+          "label": "support",
+          "text": "HEO"
+        },
+        {
+          "id": "T7",
+          "label": "value",
+          "text": "better"
+        },
+        {
+          "id": "T8",
+          "label": "property",
+          "text": "OER catalytic performance"
+        },
+        {
+          "id": "T9",
+          "label": "catalyst",
+          "text": "IrO2"
+        },
+        {
+          "id": "T10",
+          "label": "value",
+          "text": "smaller"
+        },
+        {
+          "id": "T11",
+          "label": "property",
+          "text": "overpotential"
+        },
+        {
+          "id": "T12",
+          "label": "condition",
+          "text": "10 mA cm−2"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T3"
+        },
+        {
+          "type": "equivalent",
+          "from": "T6",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T8",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T11"
+        },
+        {
+          "type": "related_to",
+          "from": "T11",
+          "to": "T10"
+        },
+        {
+          "type": "related_to",
+          "from": "T11",
+          "to": "T12"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "45_9",
+    "orig_doc_key": "69_C__d2ya00128d",
+    "orig_sent_ix": 19,
+    "text": "The AFM image in Fig. 2c confirmed that the thickness of the Fe/Co – N – C NSs is less than 8 nm , which was not reported so far in the PVP derived carbon nanosheets via the chemical blowing strategy .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "property",
+          "text": "thickness"
+        },
+        {
+          "id": "T2",
+          "label": "catalyst",
+          "text": "Fe/Co – N – C NSs"
+        },
+        {
+          "id": "T3",
+          "label": "value",
+          "text": "less than 8 nm"
+        },
+        {
+          "id": "T4",
+          "label": "precursors",
+          "text": "PVP"
+        },
+        {
+          "id": "T5",
+          "label": "support",
+          "text": "carbon nanosheets"
+        },
+        {
+          "id": "T6",
+          "label": "process",
+          "text": "chemical blowing"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T3"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "48_0",
+    "orig_doc_key": "38_B__c6ra16606g",
+    "orig_sent_ix": 47,
+    "text": "However , this method does shed some light on pore growth , especially at the transition between C800 and C900–C1000 . The former shows two separate pore sizes at ~33 and ~48 nm , while the latter show a broader pore cluster at ~40–50 nm .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "support",
+          "text": "C800"
+        },
+        {
+          "id": "T2",
+          "label": "support",
+          "text": "C900–C1000"
+        },
+        {
+          "id": "T3",
+          "label": "structure",
+          "text": "pore"
+        },
+        {
+          "id": "T4",
+          "label": "value",
+          "text": "growth"
+        },
+        {
+          "id": "T5",
+          "label": "value",
+          "text": "transition"
+        },
+        {
+          "id": "T6",
+          "label": "material_reference",
+          "text": "former"
+        },
+        {
+          "id": "T7",
+          "label": "property",
+          "text": "pore sizes"
+        },
+        {
+          "id": "T8",
+          "label": "value",
+          "text": "~33"
+        },
+        {
+          "id": "T9",
+          "label": "value",
+          "text": "~48 nm"
+        },
+        {
+          "id": "T10",
+          "label": "value",
+          "text": "separate"
+        },
+        {
+          "id": "T11",
+          "label": "material_reference",
+          "text": "latter"
+        },
+        {
+          "id": "T12",
+          "label": "value",
+          "text": "broader"
+        },
+        {
+          "id": "T13",
+          "label": "property",
+          "text": "pore cluster"
+        },
+        {
+          "id": "T14",
+          "label": "value",
+          "text": "~40–50 nm"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T4"
+        },
+        {
+          "type": "equivalent",
+          "from": "T1",
+          "to": "T6"
+        },
+        {
+          "type": "equivalent",
+          "from": "T2",
+          "to": "T11"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T10"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T9"
+        },
+        {
+          "type": "related_to",
+          "from": "T13",
+          "to": "T14"
+        },
+        {
+          "type": "related_to",
+          "from": "T13",
+          "to": "T12"
+        },
+        {
+          "type": "related_to",
+          "from": "T11",
+          "to": "T13"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "48_14",
+    "orig_doc_key": "09_A__c9ra04677a",
+    "orig_sent_ix": 34,
+    "text": "Here it may be noted that during growth in presence of BA/TMA the same MnOOH is formed after 2 h of reaction time ; however , on increase in the reaction time to 6 and 8 h Mn3O4 is formed along with MnOOH in presence of BA .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "additive",
+          "text": "BA/TMA"
+        },
+        {
+          "id": "T2",
+          "label": "structure",
+          "text": "MnOOH"
+        },
+        {
+          "id": "T3",
+          "label": "value",
+          "text": "formed"
+        },
+        {
+          "id": "T4",
+          "label": "condition",
+          "text": "reaction time"
+        },
+        {
+          "id": "T5",
+          "label": "value",
+          "text": "2 h"
+        },
+        {
+          "id": "T6",
+          "label": "value",
+          "text": "increase"
+        },
+        {
+          "id": "T7",
+          "label": "condition",
+          "text": "reaction time"
+        },
+        {
+          "id": "T8",
+          "label": "value",
+          "text": "6"
+        },
+        {
+          "id": "T9",
+          "label": "value",
+          "text": "8 h"
+        },
+        {
+          "id": "T10",
+          "label": "structure",
+          "text": "Mn3O4"
+        },
+        {
+          "id": "T11",
+          "label": "value",
+          "text": "formed"
+        },
+        {
+          "id": "T12",
+          "label": "structure",
+          "text": "MnOOH"
+        },
+        {
+          "id": "T13",
+          "label": "additive",
+          "text": "BA"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T10",
+          "to": "T11"
+        },
+        {
+          "type": "related_to",
+          "from": "T12",
+          "to": "T11"
+        },
+        {
+          "type": "related_to",
+          "from": "T13",
+          "to": "T12"
+        },
+        {
+          "type": "related_to",
+          "from": "T13",
+          "to": "T10"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T9"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T10",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T12",
+          "to": "T7"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "48_7",
+    "orig_doc_key": "69_C__d2ya00128d",
+    "orig_sent_ix": 68,
+    "text": "After 12 h chronoamperometry tests , the current decay of Fe/Co – N – C was only 7.3 % , while that of Pt/C was 18.1 % , illustrating the remarkable stability of the Fe/Co – N – C catalyst ( Fig. S9 , ESI ) .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "condition",
+          "text": "12 h"
+        },
+        {
+          "id": "T2",
+          "label": "condition",
+          "text": "chronoamperometry tests"
+        },
+        {
+          "id": "T3",
+          "label": "property",
+          "text": "current decay"
+        },
+        {
+          "id": "T4",
+          "label": "catalyst",
+          "text": "Fe/Co – N – C"
+        },
+        {
+          "id": "T5",
+          "label": "value",
+          "text": "only 7.3 %"
+        },
+        {
+          "id": "T6",
+          "label": "catalyst",
+          "text": "Pt/C"
+        },
+        {
+          "id": "T7",
+          "label": "value",
+          "text": "18.1 %"
+        },
+        {
+          "id": "T8",
+          "label": "value",
+          "text": "remarkable"
+        },
+        {
+          "id": "T9",
+          "label": "property",
+          "text": "stability"
+        },
+        {
+          "id": "T10",
+          "label": "catalyst",
+          "text": "Fe/Co – N – C"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T10",
+          "to": "T9"
+        },
+        {
+          "type": "related_to",
+          "from": "T9",
+          "to": "T8"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "4_5",
+    "orig_doc_key": "69_C__d2ya00128d",
+    "orig_sent_ix": 45,
+    "text": "Such results indicate that the valence of both Co and Fe is 2 + .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "structure",
+          "text": "Fe"
+        },
+        {
+          "id": "T2",
+          "label": "structure",
+          "text": "Co"
+        },
+        {
+          "id": "T3",
+          "label": "property",
+          "text": "valence"
+        },
+        {
+          "id": "T4",
+          "label": "value",
+          "text": "2 +"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T4"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "50_6",
+    "orig_doc_key": "29_B__c9ra02822f",
+    "orig_sent_ix": 3,
+    "text": "The theoretical overpotentials on Fe – N – C sites were calculated and revealed that moderate N-doping levels and doping configuration could enhance the ORR activity of Fe – N coordination structures in the double vacancy and that doping N atoms is not effective for ORR activity in single vacancy .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "structure",
+          "text": "single vacancy"
+        },
+        {
+          "id": "T2",
+          "label": "condition",
+          "text": "N-doping levels"
+        },
+        {
+          "id": "T3",
+          "label": "value",
+          "text": "moderate"
+        },
+        {
+          "id": "T4",
+          "label": "condition",
+          "text": "doping configuration"
+        },
+        {
+          "id": "T5",
+          "label": "value",
+          "text": "enhance"
+        },
+        {
+          "id": "T6",
+          "label": "property",
+          "text": "ORR activity"
+        },
+        {
+          "id": "T7",
+          "label": "structure",
+          "text": "Fe – N coordination structures"
+        },
+        {
+          "id": "T8",
+          "label": "structure",
+          "text": "double vacancy"
+        },
+        {
+          "id": "T9",
+          "label": "property",
+          "text": "ORR activity"
+        },
+        {
+          "id": "T10",
+          "label": "value",
+          "text": "not effective"
+        },
+        {
+          "id": "T11",
+          "label": "additive",
+          "text": "N atoms"
+        },
+        {
+          "id": "T12",
+          "label": "process",
+          "text": "doping"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T8",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T9"
+        },
+        {
+          "type": "related_to",
+          "from": "T9",
+          "to": "T10"
+        },
+        {
+          "type": "related_to",
+          "from": "T11",
+          "to": "T12"
+        },
+        {
+          "type": "related_to",
+          "from": "T11",
+          "to": "T9"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "51_14",
+    "orig_doc_key": "69_C__d2ya00128d",
+    "orig_sent_ix": 31,
+    "text": "As shown in Fig. 3a , the XRD patterns of both Fe/Co – N – C and Fe – N – C have two broad peaks centered at ~24.0 ° and ~43.5 ° belonging to the ( 002 ) and ( 100 ) planes of graphite , respectively , suggesting an amorphous nature of carbon .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "catalyst",
+          "text": "Fe/Co – N – C"
+        },
+        {
+          "id": "T2",
+          "label": "catalyst",
+          "text": "Fe – N – C"
+        },
+        {
+          "id": "T3",
+          "label": "property",
+          "text": "peaks"
+        },
+        {
+          "id": "T4",
+          "label": "value",
+          "text": "broad"
+        },
+        {
+          "id": "T5",
+          "label": "value",
+          "text": "~24.0 °"
+        },
+        {
+          "id": "T6",
+          "label": "value",
+          "text": "~43.5 °"
+        },
+        {
+          "id": "T7",
+          "label": "structure",
+          "text": "( 002 )"
+        },
+        {
+          "id": "T8",
+          "label": "structure",
+          "text": "( 100 ) planes"
+        },
+        {
+          "id": "T9",
+          "label": "support",
+          "text": "graphite"
+        },
+        {
+          "id": "T10",
+          "label": "structure",
+          "text": "amorphous"
+        },
+        {
+          "id": "T11",
+          "label": "support",
+          "text": "carbon"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T9"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T9"
+        },
+        {
+          "type": "related_to",
+          "from": "T9",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T11"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T11"
+        },
+        {
+          "type": "related_to",
+          "from": "T11",
+          "to": "T10"
+        },
+        {
+          "type": "related_to",
+          "from": "T8",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T9",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T8",
+          "to": "T3"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "51_3",
+    "orig_doc_key": "50_B__c7ra05634f",
+    "orig_sent_ix": 25,
+    "text": "Peak II can be ascribed to the pyrrolic/pyridine N and peak III is indexed to the quaternary N. Except for N type from WN , the predominant N-doped group was pyridinic N and generally it was considered as possible active sites participating in the ORR , which is crucial in ORR performances .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "property",
+          "text": "Peak II"
+        },
+        {
+          "id": "T2",
+          "label": "structure",
+          "text": "pyrrolic/pyridine N"
+        },
+        {
+          "id": "T3",
+          "label": "property",
+          "text": "peak III"
+        },
+        {
+          "id": "T4",
+          "label": "structure",
+          "text": "pyridinic N"
+        },
+        {
+          "id": "T5",
+          "label": "value",
+          "text": "possible"
+        },
+        {
+          "id": "T6",
+          "label": "property",
+          "text": "active sites"
+        },
+        {
+          "id": "T7",
+          "label": "condition",
+          "text": "ORR"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T7"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "52_4",
+    "orig_doc_key": "13_A__d4ey00084f",
+    "orig_sent_ix": 68,
+    "text": "Figure 4 and Figure S10 ( ESI ) show that with each CV , the oxidation states of Co , Mn , and Fe are reduced during the ORR and oxidized at higher potentials in a cyclic manner , showing reversible and irreversible changes in the oxidation state of the B-site metals during both the ORR and OER .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "structure",
+          "text": "Co"
+        },
+        {
+          "id": "T2",
+          "label": "structure",
+          "text": "Mn"
+        },
+        {
+          "id": "T3",
+          "label": "structure",
+          "text": "Fe"
+        },
+        {
+          "id": "T4",
+          "label": "value",
+          "text": "oxidation states"
+        },
+        {
+          "id": "T5",
+          "label": "value",
+          "text": "reduced"
+        },
+        {
+          "id": "T6",
+          "label": "condition",
+          "text": "ORR"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T6"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "53_2",
+    "orig_doc_key": "69_C__d2ya00128d",
+    "orig_sent_ix": 49,
+    "text": "In addition , the decomposition of dicyandiamide would generate a large number of unliganded N sites , which can also stabilize the highly active Fe and Co atoms through generating Fe/Co – Nx moieties during the annealing process . Fe/Co – N – C NSs were expected to exhibit excellent ORR catalytic activity due to the structural and compositional merits .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "structure",
+          "text": "Fe/Co – Nx moieties"
+        },
+        {
+          "id": "T2",
+          "label": "precursors",
+          "text": "dicyandiamide"
+        },
+        {
+          "id": "T3",
+          "label": "value",
+          "text": "large"
+        },
+        {
+          "id": "T4",
+          "label": "property",
+          "text": "number"
+        },
+        {
+          "id": "T5",
+          "label": "structure",
+          "text": "unliganded N sites"
+        },
+        {
+          "id": "T6",
+          "label": "structure",
+          "text": "Fe"
+        },
+        {
+          "id": "T7",
+          "label": "structure",
+          "text": "Co atoms"
+        },
+        {
+          "id": "T8",
+          "label": "process",
+          "text": "annealing"
+        },
+        {
+          "id": "T9",
+          "label": "value",
+          "text": "stabilize"
+        },
+        {
+          "id": "T10",
+          "label": "property",
+          "text": "highly active"
+        },
+        {
+          "id": "T11",
+          "label": "value",
+          "text": "decomposition"
+        },
+        {
+          "id": "T12",
+          "label": "catalyst",
+          "text": "Fe/Co – N – C NSs"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T11"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T10"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T10"
+        },
+        {
+          "type": "related_to",
+          "from": "T10",
+          "to": "T9"
+        },
+        {
+          "type": "related_to",
+          "from": "T12",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T12",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T12",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T12",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T12",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T12",
+          "to": "T7"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "53_3",
+    "orig_doc_key": "09_A__c9ra04677a",
+    "orig_sent_ix": 56,
+    "text": "The ORR onset and peak potential for TMA@NGMnOx/2 ( −0.07 V , −0.24 V ) , TMA@NGMnOx/6 ( −0.04 V , −0.14 V ) , BA@NGMnOx/2 ( −0.072 V , −0.21 V ) and BA@NGMnOx/8 ( −0.055 V , −0.24 V ) from the CV curves show that the ORR activity depends on the functional molecule as well as reaction time .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "catalyst",
+          "text": "TMA@NGMnOx/2"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "−0.07 V"
+        },
+        {
+          "id": "T3",
+          "label": "value",
+          "text": "−0.24 V"
+        },
+        {
+          "id": "T4",
+          "label": "catalyst",
+          "text": "TMA@NGMnOx/6"
+        },
+        {
+          "id": "T5",
+          "label": "value",
+          "text": "−0.04 V"
+        },
+        {
+          "id": "T6",
+          "label": "value",
+          "text": "−0.14 V"
+        },
+        {
+          "id": "T7",
+          "label": "catalyst",
+          "text": "BA@NGMnOx/2"
+        },
+        {
+          "id": "T8",
+          "label": "value",
+          "text": "−0.072 V"
+        },
+        {
+          "id": "T9",
+          "label": "value",
+          "text": "−0.21 V"
+        },
+        {
+          "id": "T10",
+          "label": "catalyst",
+          "text": "BA@NGMnOx/8"
+        },
+        {
+          "id": "T11",
+          "label": "value",
+          "text": "−0.055 V"
+        },
+        {
+          "id": "T12",
+          "label": "value",
+          "text": "−0.24 V"
+        },
+        {
+          "id": "T13",
+          "label": "property",
+          "text": "peak potential"
+        },
+        {
+          "id": "T14",
+          "label": "property",
+          "text": "ORR onset"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T14"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T13"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T14"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T13"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T14"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T13"
+        },
+        {
+          "type": "related_to",
+          "from": "T10",
+          "to": "T14"
+        },
+        {
+          "type": "related_to",
+          "from": "T10",
+          "to": "T13"
+        },
+        {
+          "type": "related_to",
+          "from": "T14",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T14",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T14",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T14",
+          "to": "T11"
+        },
+        {
+          "type": "related_to",
+          "from": "T13",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T13",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T13",
+          "to": "T9"
+        },
+        {
+          "type": "related_to",
+          "from": "T13",
+          "to": "T12"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T9"
+        },
+        {
+          "type": "related_to",
+          "from": "T10",
+          "to": "T11"
+        },
+        {
+          "type": "related_to",
+          "from": "T10",
+          "to": "T12"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "53_9",
+    "orig_doc_key": "50_B__c7ra05634f",
+    "orig_sent_ix": 2,
+    "text": "The stability test of the nanocomposite showed less degradation after 5 h and its methanol tolerance also was enhanced compared with Pt/C. The improved performance of the WN FNs/N – C composite can be attributed to its unique configuration and the increased exposure of active sites , which suggests that it could serve as an ideal candidate for developing high performance ORR catalysts .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "property",
+          "text": "degradation"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "less"
+        },
+        {
+          "id": "T3",
+          "label": "condition",
+          "text": "after 5 h"
+        },
+        {
+          "id": "T4",
+          "label": "property",
+          "text": "methanol tolerance"
+        },
+        {
+          "id": "T5",
+          "label": "value",
+          "text": "enhanced"
+        },
+        {
+          "id": "T6",
+          "label": "catalyst",
+          "text": "WN FNs/N – C composite"
+        },
+        {
+          "id": "T7",
+          "label": "property",
+          "text": "performance"
+        },
+        {
+          "id": "T8",
+          "label": "value",
+          "text": "improved"
+        },
+        {
+          "id": "T9",
+          "label": "structure",
+          "text": "unique configuration"
+        },
+        {
+          "id": "T10",
+          "label": "value",
+          "text": "increased"
+        },
+        {
+          "id": "T11",
+          "label": "property",
+          "text": "exposure of active sites"
+        },
+        {
+          "id": "T12",
+          "label": "material_reference",
+          "text": "nanocomposite"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T9"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T11"
+        },
+        {
+          "type": "related_to",
+          "from": "T11",
+          "to": "T10"
+        },
+        {
+          "type": "related_to",
+          "from": "T12",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T12",
+          "to": "T4"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "54_2",
+    "orig_doc_key": "09_A__c9ra04677a",
+    "orig_sent_ix": 32,
+    "text": "Figure 4 shows XRD patterns and TEM micrographs of BA@NGMnOx/2 , BA@NGMnOx/6 and BA@NGMnOx/8 . The XRD patterns of all the three samples in Figure 4a show a broad hump centering around 22.5 ° ( d = 3.94 Å ) due to NG and a peak at 26.4 ° ( d = 3.36 Å ) which may be assigned to MnOOH ( JCPDS PDF 74 - 1842 ) .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "catalyst",
+          "text": "BA@NGMnOx/2"
+        },
+        {
+          "id": "T2",
+          "label": "catalyst",
+          "text": "BA@NGMnOx/6"
+        },
+        {
+          "id": "T3",
+          "label": "catalyst",
+          "text": "BA@NGMnOx/8"
+        },
+        {
+          "id": "T4",
+          "label": "material_reference",
+          "text": "three samples"
+        },
+        {
+          "id": "T5",
+          "label": "property",
+          "text": "hump"
+        },
+        {
+          "id": "T6",
+          "label": "value",
+          "text": "22.5 °"
+        },
+        {
+          "id": "T7",
+          "label": "property",
+          "text": "d"
+        },
+        {
+          "id": "T8",
+          "label": "value",
+          "text": "3.94 Å"
+        },
+        {
+          "id": "T9",
+          "label": "support",
+          "text": "NG"
+        },
+        {
+          "id": "T10",
+          "label": "property",
+          "text": "peak"
+        },
+        {
+          "id": "T11",
+          "label": "value",
+          "text": "26.4 °"
+        },
+        {
+          "id": "T12",
+          "label": "property",
+          "text": "d"
+        },
+        {
+          "id": "T13",
+          "label": "value",
+          "text": "3.36 Å"
+        },
+        {
+          "id": "T14",
+          "label": "structure",
+          "text": "MnOOH"
+        }
+      ],
+      "relations": [
+        {
+          "type": "equivalent",
+          "from": "T1",
+          "to": "T4"
+        },
+        {
+          "type": "equivalent",
+          "from": "T2",
+          "to": "T4"
+        },
+        {
+          "type": "equivalent",
+          "from": "T3",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T9"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T14"
+        },
+        {
+          "type": "related_to",
+          "from": "T14",
+          "to": "T12"
+        },
+        {
+          "type": "related_to",
+          "from": "T14",
+          "to": "T10"
+        },
+        {
+          "type": "related_to",
+          "from": "T12",
+          "to": "T13"
+        },
+        {
+          "type": "related_to",
+          "from": "T10",
+          "to": "T11"
+        },
+        {
+          "type": "related_to",
+          "from": "T9",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T9",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T6"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "55_1",
+    "orig_doc_key": "69_C__d2ya00128d",
+    "orig_sent_ix": 48,
+    "text": "The N 1s spectra ( Fig. 3f ) can be deconvoluted into pyridinic N ( 398.9 eV ) , Fe/Co – N ( 400.1 eV ) , graphite N ( 401.5 eV ) and oxidized N. The high fraction of pyridinic ( ~45 % ) and graphic N ( ~43 % ) in the Fe/Co – N – C NSs is proposed to be responsible for the active sites for the ORRs .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "structure",
+          "text": "pyridinic N"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "398.9 eV"
+        },
+        {
+          "id": "T3",
+          "label": "structure",
+          "text": "Fe/Co – N"
+        },
+        {
+          "id": "T4",
+          "label": "value",
+          "text": "400.1 eV"
+        },
+        {
+          "id": "T5",
+          "label": "structure",
+          "text": "graphite N"
+        },
+        {
+          "id": "T6",
+          "label": "value",
+          "text": "401.5 eV"
+        },
+        {
+          "id": "T7",
+          "label": "value",
+          "text": "high"
+        },
+        {
+          "id": "T8",
+          "label": "structure",
+          "text": "pyridinic"
+        },
+        {
+          "id": "T9",
+          "label": "property",
+          "text": "fraction"
+        },
+        {
+          "id": "T10",
+          "label": "value",
+          "text": "~45 %"
+        },
+        {
+          "id": "T11",
+          "label": "structure",
+          "text": "graphic N"
+        },
+        {
+          "id": "T12",
+          "label": "value",
+          "text": "~43 %"
+        },
+        {
+          "id": "T13",
+          "label": "catalyst",
+          "text": "Fe/Co – N – C NSs"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T13",
+          "to": "T11"
+        },
+        {
+          "type": "related_to",
+          "from": "T13",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T8",
+          "to": "T9"
+        },
+        {
+          "type": "related_to",
+          "from": "T9",
+          "to": "T10"
+        },
+        {
+          "type": "related_to",
+          "from": "T11",
+          "to": "T9"
+        },
+        {
+          "type": "related_to",
+          "from": "T9",
+          "to": "T12"
+        },
+        {
+          "type": "related_to",
+          "from": "T9",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T8",
+          "to": "T10"
+        },
+        {
+          "type": "related_to",
+          "from": "T11",
+          "to": "T12"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "55_5",
+    "orig_doc_key": "29_B__c9ra02822f",
+    "orig_sent_ix": 50,
+    "text": "It has been , indeed , found that data points which significantly deviate from the fitted linear line of ΔG*O versus ΔG*OH are mainly the bridge adsorbed * O. However , results demonstrated that the difference between ΔG*OH and ΔG*OOH is 3.09 eV for Fe – N – C-gra catalysts instead of 2.46 eV , which is for an ideal catalyst , resulting in the overpotential deviating from the equilibrium potential , indicating it is impossible to avoid theoretical overpotential .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "catalyst",
+          "text": "Fe – N – C-gra"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "3.09 eV"
+        },
+        {
+          "id": "T3",
+          "label": "property",
+          "text": "difference between ΔG*OH and ΔG*OOH"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T2"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "55_6",
+    "orig_doc_key": "69_C__d2ya00128d",
+    "orig_sent_ix": 72,
+    "text": "In order to investigate the influence of the secondary transition-metal ion on the ORR activity of dual-metallic Fe/M – N – C NSs , Fe/Mn – N – C , Fe/Cu – N – C , Fe/Ni – N – C and Fe/Fe – N – C catalysts were also fabricated by adsorbing Mn2 + , Cu2 + , Ni2 + and Fe3 + ions , respectively , with the same atomic proportions and fabrication process ( Fig. S11 , ESI ) .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "catalyst",
+          "text": "Fe/M – N – C NSs"
+        },
+        {
+          "id": "T2",
+          "label": "catalyst",
+          "text": "Fe/Mn – N – C"
+        },
+        {
+          "id": "T3",
+          "label": "catalyst",
+          "text": "Fe/Cu – N – C"
+        },
+        {
+          "id": "T4",
+          "label": "catalyst",
+          "text": "Fe/Ni – N – C"
+        },
+        {
+          "id": "T5",
+          "label": "catalyst",
+          "text": "Fe/Fe – N – C"
+        }
+      ],
+      "relations": []
+    }
+  },
+  {
+    "sent_id": "56_1",
+    "orig_doc_key": "69_C__d2ya00128d",
+    "orig_sent_ix": 85,
+    "text": "Thanks to the abundant exposed Fe/Co – Nx active sites , and the synergistic effect of atomic Fe/Co – Nx dual sites and hierarchical porous structures with high surface area , the Fe/Co – N – C NSs exhibited better ORR performance than mono-metallic Fe – N – C and commercial Pt/C. When using Fe/Co – N – C NSs as air cathode electrocatalysts for ZABs , the assembled cells delivered a high OCV of 1.52 V and a remarkable power peak density of 165 mW cm−2 .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "structure",
+          "text": "Fe/Co – Nx active sites"
+        },
+        {
+          "id": "T2",
+          "label": "structure",
+          "text": "atomic Fe/Co – Nx dual sites"
+        },
+        {
+          "id": "T3",
+          "label": "value",
+          "text": "hierarchical"
+        },
+        {
+          "id": "T4",
+          "label": "structure",
+          "text": "porous structures"
+        },
+        {
+          "id": "T5",
+          "label": "value",
+          "text": "high"
+        },
+        {
+          "id": "T6",
+          "label": "property",
+          "text": "surface area"
+        },
+        {
+          "id": "T7",
+          "label": "value",
+          "text": "better"
+        },
+        {
+          "id": "T8",
+          "label": "property",
+          "text": "ORR performance"
+        },
+        {
+          "id": "T9",
+          "label": "catalyst",
+          "text": "Fe/Co – N – C NSs"
+        },
+        {
+          "id": "T10",
+          "label": "catalyst",
+          "text": "mono-metallic Fe – N – C"
+        },
+        {
+          "id": "T11",
+          "label": "catalyst",
+          "text": "Fe/Co – N – C NSs"
+        },
+        {
+          "id": "T12",
+          "label": "other_material",
+          "text": "ZABs"
+        },
+        {
+          "id": "T13",
+          "label": "value",
+          "text": "high"
+        },
+        {
+          "id": "T14",
+          "label": "property",
+          "text": "OCV"
+        },
+        {
+          "id": "T15",
+          "label": "value",
+          "text": "1.52 V"
+        },
+        {
+          "id": "T16",
+          "label": "property",
+          "text": "power peak density"
+        },
+        {
+          "id": "T17",
+          "label": "value",
+          "text": "165 mW cm−2"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T9",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T9",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T9",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T9",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T9",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T8",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T11",
+          "to": "T12"
+        },
+        {
+          "type": "related_to",
+          "from": "T12",
+          "to": "T14"
+        },
+        {
+          "type": "related_to",
+          "from": "T14",
+          "to": "T15"
+        },
+        {
+          "type": "related_to",
+          "from": "T16",
+          "to": "T17"
+        },
+        {
+          "type": "related_to",
+          "from": "T12",
+          "to": "T16"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "56_2",
+    "orig_doc_key": "29_B__c9ra02822f",
+    "orig_sent_ix": 84,
+    "text": "From Figure S2 , it also can be seen that in the double vacancy , the Fe – O bond length increases successively with the increasing numbers of the N atoms and when it is four N-coordinate , the bond length reaches the longest , which is 1.667 Å. The Eads of the O atoms decreases with the increase in N doping number , which proves that the interaction between metal Fe atoms and O atoms decreases and agrees well with the results obtained by the DOS .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "structure",
+          "text": "double vacancy"
+        },
+        {
+          "id": "T2",
+          "label": "structure",
+          "text": "Fe – O"
+        },
+        {
+          "id": "T3",
+          "label": "property",
+          "text": "bond length"
+        },
+        {
+          "id": "T4",
+          "label": "value",
+          "text": "increases successively"
+        },
+        {
+          "id": "T5",
+          "label": "value",
+          "text": "increasing"
+        },
+        {
+          "id": "T6",
+          "label": "condition",
+          "text": "numbers of the N atoms"
+        },
+        {
+          "id": "T7",
+          "label": "condition",
+          "text": "N-coordinate"
+        },
+        {
+          "id": "T8",
+          "label": "property",
+          "text": "bond length"
+        },
+        {
+          "id": "T9",
+          "label": "value",
+          "text": "longest"
+        },
+        {
+          "id": "T10",
+          "label": "value",
+          "text": "four"
+        },
+        {
+          "id": "T11",
+          "label": "property",
+          "text": "Eads"
+        },
+        {
+          "id": "T12",
+          "label": "structure",
+          "text": "O atoms"
+        },
+        {
+          "id": "T13",
+          "label": "value",
+          "text": "decreases"
+        },
+        {
+          "id": "T14",
+          "label": "value",
+          "text": "increase"
+        },
+        {
+          "id": "T15",
+          "label": "condition",
+          "text": "N doping number"
+        },
+        {
+          "id": "T16",
+          "label": "property",
+          "text": "interaction"
+        },
+        {
+          "id": "T17",
+          "label": "structure",
+          "text": "metal Fe atoms"
+        },
+        {
+          "id": "T18",
+          "label": "structure",
+          "text": "O atoms"
+        },
+        {
+          "id": "T19",
+          "label": "value",
+          "text": "decreases"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T10"
+        },
+        {
+          "type": "related_to",
+          "from": "T8",
+          "to": "T9"
+        },
+        {
+          "type": "related_to",
+          "from": "T8",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T15",
+          "to": "T14"
+        },
+        {
+          "type": "related_to",
+          "from": "T12",
+          "to": "T11"
+        },
+        {
+          "type": "related_to",
+          "from": "T11",
+          "to": "T13"
+        },
+        {
+          "type": "related_to",
+          "from": "T11",
+          "to": "T15"
+        },
+        {
+          "type": "related_to",
+          "from": "T17",
+          "to": "T16"
+        },
+        {
+          "type": "related_to",
+          "from": "T18",
+          "to": "T16"
+        },
+        {
+          "type": "related_to",
+          "from": "T16",
+          "to": "T15"
+        },
+        {
+          "type": "related_to",
+          "from": "T16",
+          "to": "T19"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "56_3",
+    "orig_doc_key": "69_C__d2ya00128d",
+    "orig_sent_ix": 56,
+    "text": "The Fe/Co – N – C NSs exhibited more positive onset potential ( Eonset = 1.0 V vs. RHE ) and half-wave potential ( E1/2 = 0.88 V vs. RHE ) , and higher ultimate current density ( JL = 6.2 mA cm−2 ) , than commercial Pt/C ( E1/2 = 0.84 V , Eonset = 0.99 V , JL = 5.1 mA cm−2 ) and Fe – N – C ( E1/2 = 0.86 V , Eonset = 0.97 V , JL = 5.3 mA cm−2 ) .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "catalyst",
+          "text": "Fe/Co – N – C NSs"
+        },
+        {
+          "id": "T2",
+          "label": "property",
+          "text": "Eonset"
+        },
+        {
+          "id": "T3",
+          "label": "value",
+          "text": "1.0 V vs. RHE"
+        },
+        {
+          "id": "T4",
+          "label": "property",
+          "text": "half-wave potential"
+        },
+        {
+          "id": "T5",
+          "label": "property",
+          "text": "E1/2"
+        },
+        {
+          "id": "T6",
+          "label": "value",
+          "text": "0.88 V vs. RHE"
+        },
+        {
+          "id": "T7",
+          "label": "property",
+          "text": "onset potential"
+        },
+        {
+          "id": "T8",
+          "label": "property",
+          "text": "ultimate current density"
+        },
+        {
+          "id": "T9",
+          "label": "property",
+          "text": "JL"
+        },
+        {
+          "id": "T10",
+          "label": "value",
+          "text": "higher"
+        },
+        {
+          "id": "T11",
+          "label": "value",
+          "text": "6.2 mA cm−2"
+        },
+        {
+          "id": "T12",
+          "label": "property",
+          "text": "E1/2"
+        },
+        {
+          "id": "T13",
+          "label": "value",
+          "text": "0.84 V"
+        },
+        {
+          "id": "T14",
+          "label": "property",
+          "text": "Eonset"
+        },
+        {
+          "id": "T15",
+          "label": "value",
+          "text": "0.99 V"
+        },
+        {
+          "id": "T16",
+          "label": "property",
+          "text": "JL"
+        },
+        {
+          "id": "T17",
+          "label": "value",
+          "text": "5.1 mA cm−2"
+        },
+        {
+          "id": "T18",
+          "label": "catalyst",
+          "text": "Fe – N – C"
+        },
+        {
+          "id": "T19",
+          "label": "property",
+          "text": "E1/2"
+        },
+        {
+          "id": "T20",
+          "label": "value",
+          "text": "0.86 V"
+        },
+        {
+          "id": "T21",
+          "label": "property",
+          "text": "Eonset"
+        },
+        {
+          "id": "T22",
+          "label": "value",
+          "text": "0.97 V"
+        },
+        {
+          "id": "T23",
+          "label": "property",
+          "text": "JL"
+        },
+        {
+          "id": "T24",
+          "label": "value",
+          "text": "5.3 mA cm−2"
+        },
+        {
+          "id": "T25",
+          "label": "value",
+          "text": "more positive"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T25"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T25"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T8"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T9"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T8",
+          "to": "T10"
+        },
+        {
+          "type": "related_to",
+          "from": "T9",
+          "to": "T11"
+        },
+        {
+          "type": "related_to",
+          "from": "T12",
+          "to": "T13"
+        },
+        {
+          "type": "related_to",
+          "from": "T14",
+          "to": "T15"
+        },
+        {
+          "type": "related_to",
+          "from": "T16",
+          "to": "T17"
+        },
+        {
+          "type": "related_to",
+          "from": "T18",
+          "to": "T19"
+        },
+        {
+          "type": "related_to",
+          "from": "T19",
+          "to": "T20"
+        },
+        {
+          "type": "related_to",
+          "from": "T18",
+          "to": "T21"
+        },
+        {
+          "type": "related_to",
+          "from": "T21",
+          "to": "T22"
+        },
+        {
+          "type": "related_to",
+          "from": "T18",
+          "to": "T23"
+        },
+        {
+          "type": "related_to",
+          "from": "T23",
+          "to": "T24"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "56_5",
+    "orig_doc_key": "51_B__d2sc04461g",
+    "orig_sent_ix": 33,
+    "text": "For Mo 2p , Mo6 + is the main oxidation state with the peaks located at 231.8 eV and 234.8 eV. Ti mainly exists in the oxidized state of Ti4 + , with the peaks located at around 457.8 eV and 463.4 eV. For the noble elements , the peaks of Pt can be identified as Pt0 located at 67.6 eV and 73.5 eV. Metallic Pd 's peaks are located at 334.7 eV and 339.2 eV. Au mainly exists in the form of Au0 4f7/2 ( 83.3 eV ) and Au0 4f5/2 ( 87.1 eV ) .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "structure",
+          "text": "Mo6 +"
+        },
+        {
+          "id": "T2",
+          "label": "property",
+          "text": "peaks"
+        },
+        {
+          "id": "T3",
+          "label": "value",
+          "text": "231.8 eV"
+        },
+        {
+          "id": "T4",
+          "label": "structure",
+          "text": "Ti4 +"
+        },
+        {
+          "id": "T5",
+          "label": "property",
+          "text": "peaks"
+        },
+        {
+          "id": "T6",
+          "label": "value",
+          "text": "457.8 eV"
+        },
+        {
+          "id": "T7",
+          "label": "property",
+          "text": "peaks"
+        },
+        {
+          "id": "T8",
+          "label": "structure",
+          "text": "Pt0"
+        },
+        {
+          "id": "T9",
+          "label": "value",
+          "text": "67.6 eV"
+        },
+        {
+          "id": "T10",
+          "label": "structure",
+          "text": "Pd"
+        },
+        {
+          "id": "T11",
+          "label": "property",
+          "text": "peaks"
+        },
+        {
+          "id": "T12",
+          "label": "value",
+          "text": "334.7 eV"
+        },
+        {
+          "id": "T13",
+          "label": "structure",
+          "text": "Au0 4f7/2"
+        },
+        {
+          "id": "T14",
+          "label": "value",
+          "text": "83.3 eV"
+        },
+        {
+          "id": "T15",
+          "label": "structure",
+          "text": "Au0 4f5/2"
+        },
+        {
+          "id": "T16",
+          "label": "value",
+          "text": "87.1 eV"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T8",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T7",
+          "to": "T9"
+        },
+        {
+          "type": "related_to",
+          "from": "T10",
+          "to": "T11"
+        },
+        {
+          "type": "related_to",
+          "from": "T11",
+          "to": "T12"
+        },
+        {
+          "type": "related_to",
+          "from": "T13",
+          "to": "T14"
+        },
+        {
+          "type": "related_to",
+          "from": "T15",
+          "to": "T16"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "5_12",
+    "orig_doc_key": "50_B__c7ra05634f",
+    "orig_sent_ix": 17,
+    "text": "Pyridine-like N is the leading species ( Fig. 4b ) due to its large amount .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "structure",
+          "text": "Pyridine-like N"
+        },
+        {
+          "id": "T2",
+          "label": "property",
+          "text": "amount"
+        },
+        {
+          "id": "T3",
+          "label": "value",
+          "text": "large"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T3"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "5_5",
+    "orig_doc_key": "13_A__d4ey00084f",
+    "orig_sent_ix": 74,
+    "text": "Even more surprising , is the vastly different behavior of BSCF/LSM compared to BSCF alone .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "value",
+          "text": "vastly different"
+        },
+        {
+          "id": "T2",
+          "label": "property",
+          "text": "behavior"
+        },
+        {
+          "id": "T3",
+          "label": "catalyst",
+          "text": "BSCF/LSM"
+        },
+        {
+          "id": "T4",
+          "label": "catalyst",
+          "text": "BSCF"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T1"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "6_0",
+    "orig_doc_key": "09_A__c9ra04677a",
+    "orig_sent_ix": 57,
+    "text": "The onset potential for the catalysts follows the order TMA@NGMnOx/6 > BA@NGMnOx/8 > TMA@NGMnOx/2 > BA@NGMnOx/2 .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "catalyst",
+          "text": "TMA@NGMnOx/6"
+        },
+        {
+          "id": "T2",
+          "label": "catalyst",
+          "text": "BA@NGMnOx/8"
+        },
+        {
+          "id": "T3",
+          "label": "catalyst",
+          "text": "TMA@NGMnOx/2"
+        },
+        {
+          "id": "T4",
+          "label": "catalyst",
+          "text": "BA@NGMnOx/2"
+        }
+      ],
+      "relations": []
+    }
+  },
+  {
+    "sent_id": "7_0",
+    "orig_doc_key": "29_B__c9ra02822f",
+    "orig_sent_ix": 104,
+    "text": "It is obvious that d band filling decrease with increasing doping number of the N atoms .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "property",
+          "text": "d band filling"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "decrease"
+        },
+        {
+          "id": "T3",
+          "label": "value",
+          "text": "increasing"
+        },
+        {
+          "id": "T4",
+          "label": "condition",
+          "text": "doping number of the N atoms"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "8_13",
+    "orig_doc_key": "38_B__c6ra16606g",
+    "orig_sent_ix": 111,
+    "text": "Were the micropores formed by etching , pyridinic nitrogens would have been etched away faster than graphitic ones .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "structure",
+          "text": "micropores"
+        },
+        {
+          "id": "T2",
+          "label": "value",
+          "text": "formed"
+        },
+        {
+          "id": "T3",
+          "label": "process",
+          "text": "etching"
+        },
+        {
+          "id": "T4",
+          "label": "structure",
+          "text": "pyridinic nitrogens"
+        },
+        {
+          "id": "T5",
+          "label": "property",
+          "text": "etched"
+        },
+        {
+          "id": "T6",
+          "label": "value",
+          "text": "faster"
+        },
+        {
+          "id": "T7",
+          "label": "structure",
+          "text": "graphitic ones"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T3"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "8_15",
+    "orig_doc_key": "38_B__c6ra16606g",
+    "orig_sent_ix": 115,
+    "text": "The final carbons show overlapping mesopores and macropores lined with graphitic shells ( Fig. 6d – f ) .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "support",
+          "text": "carbons"
+        },
+        {
+          "id": "T2",
+          "label": "structure",
+          "text": "mesopores"
+        },
+        {
+          "id": "T3",
+          "label": "structure",
+          "text": "macropores"
+        },
+        {
+          "id": "T4",
+          "label": "structure",
+          "text": "graphitic shells"
+        },
+        {
+          "id": "T5",
+          "label": "value",
+          "text": "overlapping"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T5"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "8_8",
+    "orig_doc_key": "38_B__c6ra16606g",
+    "orig_sent_ix": 53,
+    "text": "When heated to 800 ° C , significant mesoporosity develops ( C800 ) , creating 5–20 nm pores .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "process",
+          "text": "heated"
+        },
+        {
+          "id": "T2",
+          "label": "condition",
+          "text": "800 ° C"
+        },
+        {
+          "id": "T3",
+          "label": "value",
+          "text": "significant"
+        },
+        {
+          "id": "T4",
+          "label": "property",
+          "text": "mesoporosity develops"
+        },
+        {
+          "id": "T5",
+          "label": "support",
+          "text": "C800"
+        },
+        {
+          "id": "T6",
+          "label": "structure",
+          "text": "pores"
+        },
+        {
+          "id": "T7",
+          "label": "value",
+          "text": "5–20 nm"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T6"
+        },
+        {
+          "type": "related_to",
+          "from": "T6",
+          "to": "T7"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T4",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "9_10",
+    "orig_doc_key": "51_B__d2sc04461g",
+    "orig_sent_ix": 40,
+    "text": "As shown in Fig. 2a , we can clearly observe HEA clusters evenly distributed on the HEO support .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "catalyst",
+          "text": "HEA clusters"
+        },
+        {
+          "id": "T2",
+          "label": "support",
+          "text": "HEO"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T2"
+        }
+      ]
+    }
+  },
+  {
+    "sent_id": "9_11",
+    "orig_doc_key": "51_B__d2sc04461g",
+    "orig_sent_ix": 99,
+    "text": "In comparison , the performance of the Pt/C – IrO2-based battery deteriorated significantly as the cycle number increased .",
+    "gold": {
+      "entities": [
+        {
+          "id": "T1",
+          "label": "property",
+          "text": "performance"
+        },
+        {
+          "id": "T2",
+          "label": "catalyst",
+          "text": "Pt/C – IrO2-based"
+        },
+        {
+          "id": "T3",
+          "label": "other_material",
+          "text": "battery"
+        },
+        {
+          "id": "T4",
+          "label": "value",
+          "text": "deteriorated significantly"
+        },
+        {
+          "id": "T5",
+          "label": "condition",
+          "text": "cycle number"
+        },
+        {
+          "id": "T6",
+          "label": "value",
+          "text": "increased"
+        }
+      ],
+      "relations": [
+        {
+          "type": "related_to",
+          "from": "T2",
+          "to": "T3"
+        },
+        {
+          "type": "related_to",
+          "from": "T3",
+          "to": "T1"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T4"
+        },
+        {
+          "type": "related_to",
+          "from": "T1",
+          "to": "T5"
+        },
+        {
+          "type": "related_to",
+          "from": "T5",
+          "to": "T6"
+        }
+      ]
+    }
+  }
+]
